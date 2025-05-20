@@ -2,10 +2,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import LanguageSwitch from "./LanguageSwitch";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,30 +38,32 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-primary font-medium">
-              Home
+              {t.nav.home}
             </Link>
             <Link to="/how-it-works" className="text-gray-700 hover:text-primary font-medium">
-              How It Works
+              {t.nav.howItWorks}
             </Link>
             <Link to="/benefits" className="text-gray-700 hover:text-primary font-medium">
-              Benefits
+              {t.nav.benefits}
             </Link>
             <Link to="/products" className="text-gray-700 hover:text-primary font-medium">
-              Products
+              {t.nav.products}
             </Link>
             <Link to="/testimonials" className="text-gray-700 hover:text-primary font-medium">
-              Testimonials
+              {t.nav.testimonials}
             </Link>
             <Link to="/contact" className="text-gray-700 hover:text-primary font-medium">
-              Contact
+              {t.nav.contact}
             </Link>
+            <LanguageSwitch />
             <Button className="bg-cta hover:bg-cta-hover text-white">
-              Get a Free Sample
+              {t.nav.getSample}
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
+            <LanguageSwitch />
             <button 
               onClick={() => setIsOpen(!isOpen)} 
               className="text-gray-700 hover:text-primary"
@@ -79,25 +86,25 @@ const Navbar = () => {
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-white shadow-md`}>
         <div className="flex flex-col space-y-3 px-4 py-5">
           <Link to="/" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            Home
+            {t.nav.home}
           </Link>
           <Link to="/how-it-works" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            How It Works
+            {t.nav.howItWorks}
           </Link>
           <Link to="/benefits" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            Benefits
+            {t.nav.benefits}
           </Link>
           <Link to="/products" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            Products
+            {t.nav.products}
           </Link>
           <Link to="/testimonials" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            Testimonials
+            {t.nav.testimonials}
           </Link>
           <Link to="/contact" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            Contact
+            {t.nav.contact}
           </Link>
           <Button className="bg-cta hover:bg-cta-hover text-white w-full" onClick={() => setIsOpen(false)}>
-            Get a Free Sample
+            {t.nav.getSample}
           </Button>
         </div>
       </div>

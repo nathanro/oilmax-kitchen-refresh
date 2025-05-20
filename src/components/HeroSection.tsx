@@ -1,5 +1,7 @@
 
 import CTAButton from "./CTAButton";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 type HeroSectionProps = {
   title: string;
@@ -12,6 +14,9 @@ const HeroSection = ({
   subtitle,
   backgroundImage,
 }: HeroSectionProps) => {
+  const { language } = useLanguage();
+  const t = translations[language];
+  
   return (
     <div
       className="relative bg-cover bg-center pt-32 pb-20 min-h-[90vh] flex items-center"
@@ -27,13 +32,13 @@ const HeroSection = ({
           <p className="text-xl text-white/90 mb-8">{subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <CTAButton
-              text="Get a Free Sample"
+              text={t.cta.sampleButton}
               link="/contact"
               variant="sample"
               className="text-lg"
             />
             <CTAButton
-              text="Request a Quote"
+              text={t.cta.quoteButton}
               link="/contact"
               variant="quote"
               className="text-lg"

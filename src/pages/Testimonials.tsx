@@ -4,6 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Testimonials = () => {
   const testimonialCategories = [
@@ -15,21 +16,21 @@ const Testimonials = () => {
           name: "Michael Johnson",
           title: "Owner, Five Star Burger",
           location: "Chicago, IL",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1500048993953-d23a436266cf?w=150&h=150&fit=crop&crop=faces"
         },
         {
           quote: "Our customers have noticed the difference in our fried foods. They're crispier, tastier, and have a cleaner flavor. Oil-Max has become an essential part of our kitchen operations.",
           name: "Sarah Williams",
           title: "Head Chef, Oceanside Grill",
           location: "Miami, FL",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces"
         },
         {
           quote: "We've been using Oil-Max for over 5 years now. It's incredibly simple to use and has saved us thousands of dollars in oil costs. I recommend it to every restaurant owner I know.",
           name: "David Chen",
           title: "Owner, Golden Palace",
           location: "San Francisco, CA",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces"
         }
       ]
     },
@@ -41,21 +42,21 @@ const Testimonials = () => {
           name: "Miguel Hernandez",
           title: "Owner, Street Eats Food Truck",
           location: "Austin, TX",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&h=150&fit=crop&crop=faces"
         },
         {
           quote: "As a mobile business with tight margins, Oil-Max helps us maximize our profitability while keeping our signature fried items tasting fantastic.",
           name: "Emma Peterson",
           title: "Co-owner, Crispy Wheels",
           location: "Portland, OR",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=faces"
         },
         {
           quote: "The simple 4-step process is perfect for our fast-paced environment. We filter at the end of each day, and our oil lasts weeks instead of days.",
           name: "James Wilson",
           title: "Owner, Fry Guy Mobile",
           location: "Denver, CO",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&h=150&fit=crop&crop=faces"
         }
       ]
     },
@@ -67,21 +68,21 @@ const Testimonials = () => {
           name: "Robert Anderson",
           title: "Regional Manager, Burger Town",
           location: "Multiple Locations",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=faces"
         },
         {
           quote: "Oil-Max has helped us standardize our oil management practices across all franchise locations. It's simple enough that all staff can follow the process correctly.",
           name: "Jennifer Martinez",
           title: "Operations Director, Chicken Shack Franchises",
           location: "Southeast Region",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=faces"
         },
         {
           quote: "The bulk ordering option makes it easy to supply all our locations. Our franchise owners are thrilled with the cost savings and improved food quality.",
           name: "Thomas Wright",
           title: "Supply Chain Manager, Fry House Franchise Group",
           location: "Nationwide",
-          image: "https://via.placeholder.com/100x100"
+          image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=faces"
         }
       ]
     }
@@ -99,7 +100,7 @@ const Testimonials = () => {
         "Estimated annual savings of $1.2M",
         "Improved customer satisfaction scores"
       ],
-      image: "https://via.placeholder.com/600x400?text=Donut+Chain"
+      image: "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=600&h=400&fit=crop"
     },
     {
       title: "Burger King®",
@@ -112,7 +113,7 @@ const Testimonials = () => {
         "Simplified staff training for oil management",
         "Reduced environmental impact of oil disposal"
       ],
-      image: "https://via.placeholder.com/600x400?text=Burger+Chain"
+      image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=600&h=400&fit=crop"
     }
   ];
 
@@ -152,11 +153,10 @@ const Testimonials = () => {
                         </svg>
                         <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
                         <div className="flex items-center">
-                          <img 
-                            src={testimonial.image} 
-                            alt={testimonial.name} 
-                            className="w-12 h-12 rounded-full mr-4"
-                          />
+                          <Avatar className="w-12 h-12 mr-4">
+                            <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                            <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                          </Avatar>
                           <div>
                             <p className="font-semibold text-gray-800">{testimonial.name}</p>
                             <p className="text-gray-600 text-sm">{testimonial.title}</p>
@@ -272,26 +272,21 @@ const Testimonials = () => {
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {["Burger King", "Major Donut Chain", "Sparkler Filters", "Restaurant Chain"].map((company, index) => (
               <div key={index} className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                <img 
-                  src={`https://via.placeholder.com/120x80?text=${company.replace(' ', '+')}`} 
-                  alt={company} 
-                  className="h-16 object-contain" 
-                />
+                <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+                  <p className="text-lg font-semibold text-gray-700">{company}</p>
+                </div>
               </div>
             ))}
           </div>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="https://via.placeholder.com/40x40?text=FDA" alt="FDA Recognized" className="mr-2" />
               <span className="text-gray-700 font-medium">FDA Recognized</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="https://via.placeholder.com/40x40?text=USDA" alt="USDA Approved" className="mr-2" />
               <span className="text-gray-700 font-medium">USDA Approved</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="https://via.placeholder.com/40x40?text=USA" alt="Made in USA" className="mr-2" />
               <span className="text-gray-700 font-medium">Made in USA</span>
             </div>
           </div>

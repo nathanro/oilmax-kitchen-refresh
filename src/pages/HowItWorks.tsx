@@ -1,32 +1,36 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 const HowItWorks = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const steps = [
     {
       number: 1,
-      title: "Sprinkle",
-      description: "Add the recommended amount of Oil-Max powder to your hot oil (325°F - 350°F). The amount varies based on your fryer size, but typically 2-4 oz per 50 lbs of oil.",
+      title: t.howItWorks.steps.sprinkle.name,
+      description: t.howItWorks.steps.sprinkle.description,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
     },
     {
       number: 2,
-      title: "Bind",
-      description: "Stir gently for 30-60 seconds. Oil-Max powder binds with food particles, carbon build-up, and other impurities in the oil, forming larger particles that can be easily filtered.",
+      title: t.howItWorks.steps.bind.name,
+      description: t.howItWorks.steps.bind.description,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
     },
     {
       number: 3,
-      title: "Filter",
-      description: "Run the oil through your existing filtration system. The bound particles are removed, leaving behind cleaner, clearer oil. Compatible with all commercial filtering systems.",
+      title: t.howItWorks.steps.filter.name,
+      description: t.howItWorks.steps.filter.description,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
     },
     {
       number: 4,
-      title: "Fry",
-      description: "Return the filtered oil to your fryer and continue cooking with cleaner oil that produces better tasting food. It's that simple!",
+      title: t.howItWorks.steps.fry.name,
+      description: t.howItWorks.steps.fry.description,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
     }
   ];
@@ -57,8 +61,8 @@ const HowItWorks = () => {
   return (
     <>
       <HeroSection
-        title="How Oil-Max Works"
-        subtitle="A simple 4-step process that extends oil life and improves food quality."
+        title={t.howItWorks.title}
+        subtitle={t.howItWorks.subtitle}
         backgroundImage="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1400&h=700&auto=format&fit=crop"
       />
 
@@ -66,8 +70,8 @@ const HowItWorks = () => {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <SectionHeading
-            title="The Oil-Max Process"
-            subtitle="Our simple 4-step process takes minutes and saves thousands."
+            title={t.howItWorks.title}
+            subtitle={t.howItWorks.subtitle}
           />
 
           {steps.map((step, index) => (

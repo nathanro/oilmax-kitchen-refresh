@@ -1,25 +1,17 @@
 
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
-export type Language = 'en' | 'es';
+export type Language = "en" | "es";
 
-type LanguageContextType = {
+interface LanguageContextType {
   language: Language;
   setLanguage: (language: Language) => void;
-};
+}
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  // Get initial language from localStorage or default to English
-  const [language, setLanguageState] = useState<Language>(
-    () => (localStorage.getItem('language') as Language) || 'en'
-  );
-
-  const setLanguage = (newLanguage: Language) => {
-    setLanguageState(newLanguage);
-    localStorage.setItem('language', newLanguage);
-  };
+  const [language, setLanguage] = useState<Language>("en");
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
@@ -30,8 +22,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
+  
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
+  
   return context;
 };

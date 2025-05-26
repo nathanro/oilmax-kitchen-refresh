@@ -1,5 +1,3 @@
-
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -33,7 +31,7 @@ const HowItWorks = () => {
       number: 4,
       title: "Enjoy Cleaner Oil, Longer Fry Life",
       description: "Your oil stays cleaner, your food tastes better, and your wallet stays fuller. Change oil less often without sacrificing quality.",
-      image: "/lovable-uploads/cfdd392f-f156-4534-90f4-e945e4664245.png"
+      image: "/lovable-uploads/fe972632-e93f-4d4b-808f-a30c4937f3b7.png"
     }
   ];
 

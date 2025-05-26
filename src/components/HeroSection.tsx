@@ -21,7 +21,7 @@ const HeroSection = ({
     <div
       className="relative bg-cover bg-center pt-32 pb-20 min-h-[90vh] flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/lovable-uploads/8418117e-c143-4222-b8df-ffa3f849465f.png)`,
       }}
     >
       <div className="container mx-auto px-4 z-10">

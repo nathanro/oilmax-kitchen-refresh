@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -52,7 +53,7 @@ const Index = () => {
 
   // Trusted by logos with real image URLs
   const trustedBy = [
-    { name: "Burger King", logo: "/lovable-uploads/burger-king-logo.png" },
+    { name: "Burger King", logo: "https://logos-world.net/wp-content/uploads/2020/08/Burger-King-Logo.png" },
     { name: "Major Donut Chain", logo: "/lovable-uploads/donut-chain-logo.png" },
     { name: "Sparkler Filters", logo: "/lovable-uploads/sparkler-logo.png" },
     { name: "Restaurant Chain", logo: "/lovable-uploads/restaurant-logo.png" },

@@ -1,4 +1,5 @@
 
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -26,7 +27,7 @@ const HowItWorks = () => {
       number: 3,
       title: "Filter As Usual",
       description: "Use your current filtration system or pair with the Oil-Max Filter System. The powder goes to work helping your filter capture more — and faster.",
-      image: "/lovable-uploads/d062a8f0-d468-470a-ab44-9135e4487f2f.png"
+      image: "/lovable-uploads/354a50e5-26f5-4d4a-8878-565397980afc.png"
     },
     {
       number: 4,

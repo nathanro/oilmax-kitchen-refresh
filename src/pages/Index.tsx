@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -170,8 +171,9 @@ const Index = () => {
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {trustedBy.map((company, index) => (
-              <div key={index} className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                <img src={company.logo} alt={company.name} className="h-16 object-contain" />
+              <div key={index} className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+                <img src={company.logo} alt={company.name} className="h-16 object-contain mb-2" />
+                <span className="text-sm text-gray-600 font-medium">{company.name}</span>
               </div>
             ))}
           </div>

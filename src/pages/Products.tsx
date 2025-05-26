@@ -1,18 +1,11 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Wrench, Box } from "lucide-react";
-
 const Products = () => {
-  return (
-    <>
-      <HeroSection
-        title="Our Products: Simple. Proven. Ready to Work."
-        subtitle="Professional solutions for extending the life of your fryer oil."
-        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop"
-      />
+  return <>
+      <HeroSection title="Our Products: Simple. Proven. Ready to Work." subtitle="Professional solutions for extending the life of your fryer oil." backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop" />
 
       {/* Main Products Section */}
       <section className="py-20 px-4 bg-white">
@@ -22,11 +15,7 @@ const Products = () => {
           <div className="mb-16">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/2">
-                <img 
-                  src="/lovable-uploads/ed92be09-7974-4906-88a3-8143478cdf1b.png" 
-                  alt="Oil-Max Organic Fryer Powder" 
-                  className="rounded-lg shadow-lg w-full h-auto object-cover"
-                />
+                <img src="/lovable-uploads/ed92be09-7974-4906-88a3-8143478cdf1b.png" alt="Oil-Max Organic Fryer Powder" className="rounded-lg shadow-lg w-full h-auto object-cover" />
                 <h3 className="text-xl font-semibold text-center mt-4">Oil-Max Organic Fryer Powder</h3>
               </div>
               <div className="w-full md:w-1/2">
@@ -67,16 +56,8 @@ const Products = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-3">
-                  <CTAButton 
-                    text="Request a Quote" 
-                    link="/contact" 
-                    variant="quote"
-                  />
-                  <CTAButton 
-                    text="Get a Free Sample" 
-                    link="/contact" 
-                    variant="sample"
-                  />
+                  <CTAButton text="Request a Quote" link="/contact" variant="quote" />
+                  <CTAButton text="Get a Free Sample" link="/contact" variant="sample" />
                 </div>
               </div>
             </div>
@@ -86,11 +67,7 @@ const Products = () => {
           <div className="mb-16 border-t border-gray-100 pt-16">
             <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
               <div className="w-full md:w-1/2">
-                <img 
-                  src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=500&h=350&auto=format&fit=crop" 
-                  alt="Simple Filtration Systems" 
-                  className="rounded-lg shadow-lg w-full h-auto object-cover"
-                />
+                <img alt="Simple Filtration Systems" className="rounded-lg shadow-lg w-full h-auto object-cover" src="/lovable-uploads/5271172d-9b9b-4b9f-88f5-641bfcb382bb.jpg" />
                 <h3 className="text-xl font-semibold text-center mt-4">Simple Filtration Systems</h3>
               </div>
               <div className="w-full md:w-1/2">
@@ -128,16 +105,8 @@ const Products = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-3">
-                  <CTAButton 
-                    text="Request a Quote" 
-                    link="/contact" 
-                    variant="quote"
-                  />
-                  <CTAButton 
-                    text="Learn More" 
-                    link="/contact" 
-                    variant="sample"
-                  />
+                  <CTAButton text="Request a Quote" link="/contact" variant="quote" />
+                  <CTAButton text="Learn More" link="/contact" variant="sample" />
                 </div>
               </div>
             </div>
@@ -158,12 +127,7 @@ const Products = () => {
                     Have a unique fryer or setup? We've worked with everyone from food trucks to factories. 
                     Let our team help match the right equipment to your operation — fast, simple, and without the upsell.
                   </p>
-                  <CTAButton 
-                    text="Contact Us for Custom Solutions" 
-                    link="/contact" 
-                    variant="quote"
-                    className="text-lg"
-                  />
+                  <CTAButton text="Contact Us for Custom Solutions" link="/contact" variant="quote" className="text-lg" />
                 </div>
               </CardContent>
             </Card>
@@ -174,10 +138,7 @@ const Products = () => {
       {/* Additional Benefits Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
-          <SectionHeading 
-            title="Why Oil-Max Works Better" 
-            subtitle="The science behind cleaner oil and better-tasting food"
-          />
+          <SectionHeading title="Why Oil-Max Works Better" subtitle="The science behind cleaner oil and better-tasting food" />
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card>
@@ -275,23 +236,11 @@ const Products = () => {
             Experience the benefits of Oil-Max in your own kitchen with a free sample.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton 
-              text="Get a Free Sample" 
-              link="/contact" 
-              variant="sample" 
-              className="text-lg"
-            />
-            <CTAButton 
-              text="Request a Quote" 
-              link="/contact" 
-              variant="quote"
-              className="text-lg"
-            />
+            <CTAButton text="Get a Free Sample" link="/contact" variant="sample" className="text-lg" />
+            <CTAButton text="Request a Quote" link="/contact" variant="quote" className="text-lg" />
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Products;

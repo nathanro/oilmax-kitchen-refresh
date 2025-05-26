@@ -1,5 +1,3 @@
-
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -139,7 +137,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto bg-gray-50 rounded-lg p-8 shadow-md">
             <div className="flex flex-col items-center text-center">
               <svg className="w-12 h-12 text-primary opacity-50 mb-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
+                <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
               </svg>
               <p className="text-lg text-gray-700 mb-6">
                 {t.testimonials.featuredQuote}
@@ -189,7 +187,7 @@ const Index = () => {
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usda}</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/usa-logo.png" alt="Made in USA" className="h-10 w-10 object-contain mr-2" />
+              <img src="/lovable-uploads/200a1065-a8ba-45eb-89e2-b1bfd7906c8f.png" alt="Made in USA" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usa}</span>
             </div>
           </div>
@@ -224,4 +222,3 @@ const Index = () => {
 };
 
 export default Index;
-

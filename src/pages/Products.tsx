@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -18,7 +17,7 @@ const Products = () => {
         "Simple 4-step process",
         "Typically provides 3-4 months of daily use"
       ],
-      image: "https://via.placeholder.com/500x350?text=Oil-Max+Powder"
+      image: "/lovable-uploads/ed92be09-7974-4906-88a3-8143478cdf1b.png"
     },
     {
       name: "Oil-Max Organic Fryer Powder",

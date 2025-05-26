@@ -386,7 +386,8 @@ const Testimonials = () => {
         </div>
       </section>
 
-      {/* Video Testimonials */}
+      {/* Video Testimonials - Hidden until videos are available */}
+      {/* 
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeading
@@ -416,6 +417,7 @@ const Testimonials = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Trusted By Logos */}
       <section className="py-16 px-4 bg-white">

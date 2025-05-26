@@ -171,6 +171,102 @@ const Products = () => {
         </div>
       </section>
 
+      {/* Additional Benefits Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <SectionHeading 
+            title="Why Oil-Max Works Better" 
+            subtitle="The science behind cleaner oil and better-tasting food"
+          />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="p-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-xl">💰</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Proven ROI</h3>
+                  <p className="text-gray-600">
+                    Customers typically see return on investment within 2-4 weeks through reduced oil costs and improved food quality.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-xl">🔬</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Scientific Formula</h3>
+                  <p className="text-gray-600">
+                    Our organic compounds bind to polar compounds and free fatty acids that cause oil degradation and off-flavors.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-xl">⏱️</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Save Time</h3>
+                  <p className="text-gray-600">
+                    Less frequent oil changes mean more time cooking and serving customers instead of maintaining equipment.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-xl">👥</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Staff Friendly</h3>
+                  <p className="text-gray-600">
+                    No special training required. Simple process that any kitchen staff member can follow safely and effectively.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-xl">🌍</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Environmentally Safe</h3>
+                  <p className="text-gray-600">
+                    100% organic and biodegradable. Reduces oil waste and environmental impact of your kitchen operations.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-xl">🏆</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Industry Proven</h3>
+                  <p className="text-gray-600">
+                    Trusted by over 2,500 kitchens since the 1960s, from small food trucks to major restaurant chains.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-oilmax-light">
         <div className="container mx-auto text-center">

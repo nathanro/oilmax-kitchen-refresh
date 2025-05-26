@@ -13,7 +13,7 @@ const HowItWorks = () => {
       number: 1,
       title: t.howItWorks.steps.sprinkle.name,
       description: t.howItWorks.steps.sprinkle.description,
-      image: "/lovable-uploads/04f99798-248d-4ada-bc7e-d4144e51ac1f.png"
+      image: "/lovable-uploads/97005545-76a4-4e86-b001-9673343f5b44.png"
     },
     {
       number: 2,

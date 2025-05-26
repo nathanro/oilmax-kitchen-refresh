@@ -51,12 +51,12 @@ const Index = () => {
     }
   ];
 
-  // Trusted by logos with real image URLs
+  // Trusted by logos with appropriate images
   const trustedBy = [
-    { name: "Burger King", logo: "/lovable-uploads/burger-king-logo.png" },
-    { name: "Major Donut Chain", logo: "/lovable-uploads/donut-chain-logo.png" },
-    { name: "Sparkler Filters", logo: "/lovable-uploads/sparkler-logo.png" },
-    { name: "Restaurant Chain", logo: "/lovable-uploads/restaurant-logo.png" },
+    { name: "Burger King", logo: "https://logos-world.net/wp-content/uploads/2020/11/Burger-King-Logo.png" },
+    { name: "Dunkin' Donuts", logo: "https://logos-world.net/wp-content/uploads/2020/05/Dunkin-Logo.png" },
+    { name: "Sparkler Filters", logo: "/lovable-uploads/0abe72b1-0f68-4b7a-b63f-ae6ba054e8a4.png" },
+    { name: "Restaurant Chains", logo: "https://cdn-icons-png.flaticon.com/512/2515/2515183.png" },
   ];
 
   return (
@@ -64,7 +64,7 @@ const Index = () => {
       <HeroSection
         title={t.hero.title}
         subtitle={t.hero.subtitle}
-        backgroundImage="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&h=700&auto=format&fit=crop"
+        backgroundImage="/lovable-uploads/06082c7f-5148-419f-b098-78f8623942d9.png"
       />
 
       {/* Quick Benefits Section */}
@@ -179,15 +179,15 @@ const Index = () => {
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/fda-logo.png" alt="FDA Recognized" className="h-10 w-10 object-contain mr-2" />
+              <img src="https://logos-world.net/wp-content/uploads/2021/02/FDA-Logo.png" alt="FDA Recognized" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.fda}</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/usda-logo.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/09/USDA-Logo.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usda}</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/usa-logo.png" alt="Made in USA" className="h-10 w-10 object-contain mr-2" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Made_In_The_USA_Logo.svg/1200px-Made_In_The_USA_Logo.svg.png" alt="Made in USA" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usa}</span>
             </div>
           </div>

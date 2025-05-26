@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -18,7 +17,7 @@ const Products = () => {
         "Simple 4-step process",
         "Typically provides 3-4 months of daily use"
       ],
-      image: "https://via.placeholder.com/500x350?text=Oil-Max+Powder"
+      image: "/lovable-uploads/f0d0c9bb-b2fc-4211-b2e3-d59974d4a406.png"
     },
     {
       name: "Oil-Max Organic Fryer Powder",
@@ -31,7 +30,7 @@ const Products = () => {
         "Perfect for franchises and multi-location restaurants",
         "Special packaging options for convenient storage"
       ],
-      image: "https://via.placeholder.com/500x350?text=Oil-Max+Bulk"
+      image: "/lovable-uploads/0abe72b1-0f68-4b7a-b63f-ae6ba054e8a4.png"
     },
     {
       name: "Compact Filtration System",
@@ -44,7 +43,7 @@ const Products = () => {
         "Compatible with Oil-Max powder",
         "Easy to clean and maintain"
       ],
-      image: "https://via.placeholder.com/500x350?text=Filtration+System"
+      image: "/lovable-uploads/171cffd1-b743-4224-8624-48ab1ab37d28.png"
     },
     {
       name: "Replacement Filter Media",
@@ -57,7 +56,7 @@ const Products = () => {
         "Easy to replace",
         "Compatible with most commercial filtration systems"
       ],
-      image: "https://via.placeholder.com/500x350?text=Filter+Media"
+      image: "/lovable-uploads/dd39d216-b22d-4370-9d41-5268d5dda92d.png"
     }
   ];
 
@@ -98,7 +97,7 @@ const Products = () => {
       <HeroSection
         title="Oil-Max Products"
         subtitle="Professional solutions for extending the life of your fryer oil."
-        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop"
+        backgroundImage="/lovable-uploads/65abd924-c207-41df-b237-bc4593d24c10.png"
       />
 
       {/* Product Showcase */}
@@ -180,16 +179,11 @@ const Products = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <h3 className="text-xl font-semibold mb-6">No Special Equipment Needed</h3>
-              <p className="text-gray-700 mb-4">
-                Oil-Max integrates seamlessly with your existing kitchen equipment. There's no need to purchase, install, or maintain any special devices or systems.
-              </p>
-              <p className="text-gray-700 mb-4">
-                Our powder works with all commercial fryers and filtration systems, from built-in automatic filters to portable manual units.
-              </p>
-              <p className="text-gray-700">
-                If you don't currently have a filtration system, we offer a compact solution that's easy to use and affordable.
-              </p>
+              <img 
+                src="/lovable-uploads/a5f06bcb-19fa-41a3-82a2-c4b46d9652ba.png" 
+                alt="Oil filtration equipment" 
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>

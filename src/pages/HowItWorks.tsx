@@ -25,7 +25,7 @@ const HowItWorks = () => {
       number: 3,
       title: t.howItWorks.steps.filter.name,
       description: t.howItWorks.steps.filter.description,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
+      image: "/lovable-uploads/46896a10-79c8-40dc-93cc-f5773ae1b748.png"
     },
     {
       number: 4,

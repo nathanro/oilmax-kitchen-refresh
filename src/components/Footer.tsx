@@ -120,7 +120,10 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400">{t.footer.copyright}</p>
+          <div className="flex flex-col items-center md:items-start">
+            <p className="text-gray-400">{t.footer.copyright}</p>
+            <p className="text-gray-400 text-sm mt-2">Part of the Sparkler Filters Family | Built in the USA | Real Support, Real People</p>
+          </div>
           <div className="mt-4 md:mt-0 flex flex-col md:flex-row items-center">
             <div className="flex space-x-6 mb-4 md:mb-0 md:mr-8">
               {legal.map((item) => (

@@ -7,64 +7,46 @@ import { Card, CardContent } from "@/components/ui/card";
 const Benefits = () => {
   const benefitsList = [
     {
-      icon: (
-        <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      title: "Up to 4x Longer Oil Life",
-      description: "Oil-Max extends your fryer oil life by up to 4 times, dramatically reducing the frequency of oil changes and disposal costs.",
-      detail: "Our customers typically report oil lasting 3-4 times longer than before using Oil-Max. For many restaurants, this means changing oil once a month instead of weekly."
+      icon: "💸",
+      title: "Save Thousands Per Year",
+      description: "Our customers routinely cut fryer oil costs in half or more. One national chain saved over $3 million a year after switching to Oil-Max.",
+      detail: "Even small restaurants and food trucks report saving hundreds to thousands annually. The ROI is immediate and significant."
     },
     {
-      icon: (
-        <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      title: "Lower Oil Costs",
-      description: "Save thousands of dollars per year on oil purchases. The ROI is immediate and significant.",
-      detail: "The average restaurant with 3 fryers can save $5,000-$10,000 annually on oil costs alone. Oil-Max pays for itself many times over throughout the year."
+      icon: "😋",
+      title: "Better-Tasting Food",
+      description: "Clean oil means crispier fries, golden-brown donuts, and fried chicken that tastes fresh — not greasy.",
+      detail: "Customers notice. So do your online reviews. Better oil quality directly translates to improved food taste and customer satisfaction."
     },
     {
-      icon: (
-        <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-        </svg>
-      ),
-      title: "Better Food Taste & Reviews",
-      description: "Cleaner oil means better tasting food, which leads to improved customer satisfaction and reviews.",
-      detail: "By removing impurities that cause off-flavors, Oil-Max helps maintain the true flavor of your food. Customers notice the difference in taste and crispiness."
+      icon: "🧼",
+      title: "Cleaner Oil for Longer",
+      description: "Oil-Max binds impurities and food particles, making filtration more effective and extending your oil life by up to 4x.",
+      detail: "That means fewer oil changes, better clarity, and less downtime — with no drop in food quality."
     },
     {
-      icon: (
-        <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
-      title: "100% Organic & Safe",
-      description: "Oil-Max is FDA & USDA recognized, made from 100% organic materials with no harmful chemicals.",
-      detail: "Our proprietary formula is completely safe and meets all regulatory requirements. It's manufactured in the USA under strict quality control standards."
+      icon: "🧑‍🍳",
+      title: "No Training or Special Equipment Needed",
+      description: "Just sprinkle, filter, and go. Oil-Max works with your existing fryer and filtration setup.",
+      detail: "It's simple, safe, and easy enough for any staff member to use — from the most experienced chefs to new hires."
     },
     {
-      icon: (
-        <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-        </svg>
-      ),
-      title: "No Training Required",
-      description: "The Oil-Max process is simple enough that any staff member can learn it in minutes.",
-      detail: "Our simple 4-step process requires no special training and integrates easily into your existing filtration routine. Staff can master it after a single demonstration."
+      icon: "🛻",
+      title: "For Every Kitchen, Big or Small",
+      description: "From single-fryer food trucks and gas stations to chicken wing shops running 10 fryers all day — and even large-scale industrial fryers.",
+      detail: "Oil-Max scales to match your operation. Wherever you fry, we've got you covered."
     },
     {
-      icon: (
-        <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      title: "Universal Compatibility",
-      description: "Compatible with all commercial fryers and filtration systems without any equipment modifications.",
-      detail: "Whether you have a built-in filtering system or use portable filters, Oil-Max works seamlessly with your existing equipment. No need to purchase or install any special devices."
+      icon: "🪴",
+      title: "Organic, Food-Safe Formula",
+      description: "Made from natural, non-toxic ingredients and recognized by the FDA and USDA, Oil-Max is safer for your food, your staff, and your customers.",
+      detail: "Unlike chemical-based powders, Oil-Max is clean, green, and GRAS-certified. The only 100% Organic Safe Fry Formula!"
+    },
+    {
+      icon: "🏗️",
+      title: "Built in the USA. Backed by Real Support.",
+      description: "Oil-Max is proudly manufactured in America and supported by Sparkler Filters, the company that invented the commercial cooking oil filter.",
+      detail: "Have questions? Need help? Our team in Texas is just a phone call away — and we stand by every box we ship."
     }
   ];
 
@@ -94,8 +76,8 @@ const Benefits = () => {
   return (
     <>
       <HeroSection
-        title="The Benefits of Oil-Max"
-        subtitle="Save money, improve food quality, and simplify your kitchen operations."
+        title="🌟 Benefits of Oil-Max: Clean Oil. Better Food. Real Savings."
+        subtitle="Discover how Oil-Max transforms kitchen operations with proven results and real customer savings."
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop"
       />
 
@@ -104,14 +86,14 @@ const Benefits = () => {
         <div className="container mx-auto">
           <SectionHeading
             title="Why Oil-Max Makes a Difference"
-            subtitle="Discover how Oil-Max can transform your kitchen operations and bottom line."
+            subtitle="From cost savings to food quality improvements, Oil-Max delivers results that matter to your business."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefitsList.map((benefit, index) => (
               <Card key={index} className="border border-gray-200 hover:shadow-lg transition duration-300">
                 <CardContent className="pt-6 flex flex-col items-center text-center p-8">
-                  <div className="mb-5">{benefit.icon}</div>
+                  <div className="text-6xl mb-5">{benefit.icon}</div>
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-gray-600 mb-4">{benefit.description}</p>
                   <p className="text-gray-700 text-sm border-t border-gray-100 pt-4">{benefit.detail}</p>

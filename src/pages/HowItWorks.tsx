@@ -11,27 +11,27 @@ const HowItWorks = () => {
   const steps = [
     {
       number: 1,
-      title: t.howItWorks.steps.sprinkle.name,
-      description: t.howItWorks.steps.sprinkle.description,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
+      title: "Sprinkle It In",
+      description: "Add Oil-Max to your hot fryer oil. Just a small amount before or after service is all it takes.",
+      image: "/lovable-uploads/97005545-76a4-4e86-b001-9673343f5b44.png"
     },
     {
       number: 2,
-      title: t.howItWorks.steps.bind.name,
-      description: t.howItWorks.steps.bind.description,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
+      title: "Let It Work",
+      description: "The powder binds with carbon, crumbs, and impurities — even the stuff you can't see — so they're easier to filter out.",
+      image: "/lovable-uploads/53666174-d2a7-4970-a99b-da46478ea303.png"
     },
     {
       number: 3,
-      title: t.howItWorks.steps.filter.name,
-      description: t.howItWorks.steps.filter.description,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
+      title: "Filter As Usual",
+      description: "Use your current filtration system or pair with the Oil-Max Filter System. The powder goes to work helping your filter capture more — and faster.",
+      image: "/lovable-uploads/354a50e5-26f5-4d4a-8878-565397980afc.png"
     },
     {
       number: 4,
-      title: t.howItWorks.steps.fry.name,
-      description: t.howItWorks.steps.fry.description,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
+      title: "Enjoy Cleaner Oil, Longer Fry Life",
+      description: "Your oil stays cleaner, your food tastes better, and your wallet stays fuller. Change oil less often without sacrificing quality.",
+      image: "/lovable-uploads/fe972632-e93f-4d4b-808f-a30c4937f3b7.png"
     }
   ];
 
@@ -61,8 +61,8 @@ const HowItWorks = () => {
   return (
     <>
       <HeroSection
-        title={t.howItWorks.title}
-        subtitle={t.howItWorks.subtitle}
+        title="🔄 How It Works: Sprinkle. Filter. Fry. Repeat."
+        subtitle="Oil-Max fits into your routine — no special training, no fancy setup. Whether you're frying donuts, wings, fries, or anything else, the process is always this simple:"
         backgroundImage="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1400&h=700&auto=format&fit=crop"
       />
 
@@ -70,8 +70,8 @@ const HowItWorks = () => {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <SectionHeading
-            title={t.howItWorks.title}
-            subtitle={t.howItWorks.subtitle}
+            title="Simple 4-Step Process"
+            subtitle="Oil-Max is incredibly easy to use with any commercial fryer system."
           />
 
           {steps.map((step, index) => (
@@ -97,7 +97,7 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Video Demonstration */}
+      {/* Video Demonstration - Hidden until video is available
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeading
@@ -115,6 +115,7 @@ const HowItWorks = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Technical Specifications */}
       <section className="py-20 px-4 bg-white">

@@ -1,10 +1,10 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Shield, ShieldCheck } from "lucide-react";
 
 const Testimonials = () => {
   const testimonialCategories = [
@@ -149,7 +149,7 @@ const Testimonials = () => {
                     <Card key={index} className="border border-gray-200 hover:shadow-lg transition duration-300">
                       <CardContent className="p-8">
                         <svg className="w-10 h-10 text-primary opacity-30 mb-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                          <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
+                          <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
                         </svg>
                         <p className="text-gray-700 mb-6">"{testimonial.quote}"</p>
                         <div className="flex items-center">
@@ -230,8 +230,165 @@ const Testimonials = () => {
         </div>
       </section>
 
-      {/* Video Testimonials */}
+      {/* Trusted By Section */}
       <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-4">
+              <Shield className="w-8 h-8 text-primary mr-3" />
+              <h2 className="text-3xl md:text-4xl font-bold">Trusted By Proof. Built on Legacy.</h2>
+            </div>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Backed by decades of proven results and trusted by industry leaders nationwide.
+            </p>
+          </div>
+
+          {/* Usage Statistics */}
+          <div className="bg-gradient-to-r from-primary to-oilmax-dark text-white rounded-lg p-8 mb-16">
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-4">
+                <ShieldCheck className="w-12 h-12 mr-4" />
+                <h3 className="text-2xl md:text-3xl font-bold">Used in Over 2,500 Locations Since the 1960s</h3>
+              </div>
+              <p className="text-lg opacity-90">
+                From independent family-owned restaurants to nationally recognized franchises, Oil-Max has been trusted for decades to deliver consistent results in high-volume kitchens.
+              </p>
+            </div>
+          </div>
+
+          {/* Field Testing Results */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8">Field-Tested by National Chains</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Card className="border border-gray-200">
+                <CardContent className="p-8">
+                  <div className="mb-4">
+                    <span className="inline-block bg-primary text-white text-sm font-semibold px-3 py-1 rounded-full mb-3">
+                      Burger King® Partner Evaluation
+                    </span>
+                    <p className="text-sm text-gray-600">2012</p>
+                  </div>
+                  <p className="text-gray-700 italic mb-4">
+                    "The Sparklaid filter aid product met or exceeded the requirements set forth by Burger King Corporation. The powder was tested under live operational conditions and helped improve oil clarity, taste, and extended the usable life of oil in our fryers."
+                  </p>
+                  <p className="text-sm text-gray-600">— Field Testing Summary</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-gray-200">
+                <CardContent className="p-8">
+                  <div className="mb-4">
+                    <span className="inline-block bg-primary text-white text-sm font-semibold px-3 py-1 rounded-full mb-3">
+                      National Donut Brand
+                    </span>
+                    <p className="text-sm text-gray-600">350+ Locations</p>
+                  </div>
+                  <p className="text-gray-700 italic mb-4">
+                    "We currently use the Oil-Max and Sparklaid systems in every one of our 350+ stores nationwide. Before using the Oil-Max system, we were changing out the oil once per week — now we change it once per month. The savings for us is literally millions of dollars per year."
+                  </p>
+                  <p className="text-sm text-gray-600">— Franchise Audit</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Government Recognition */}
+          <div className="bg-gray-50 rounded-lg p-8 mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8">Recognized by U.S. Government Agencies</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg">FDA</span>
+                  </div>
+                  <h4 className="font-semibold mb-2">FDA Certificate of Free Sale</h4>
+                  <p className="text-gray-600 text-sm">Verified safe for commercial food operations</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg">USDA</span>
+                  </div>
+                  <h4 className="font-semibold mb-2">USDA-Documented Since the 1960s</h4>
+                  <p className="text-gray-600 text-sm">Approved for use in government-supervised facilities</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg">GRAS</span>
+                  </div>
+                  <h4 className="font-semibold mb-2">GRAS Status Certified</h4>
+                  <p className="text-gray-600 text-sm">Generally Recognized As Safe under FDA standards</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Real-World Testimonials */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8">Real-World Testimonials</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="border border-gray-200">
+                <CardContent className="p-6">
+                  <p className="text-gray-700 italic mb-4">
+                    "After exploring several different options in the creation of FGFT, I have to say without any doubt that I'll put the Oil-Max filtration systems, and envelopes against any system on the market today"
+                  </p>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="font-semibold text-gray-800">Nathan Moore</p>
+                      <p className="text-gray-600 text-sm">Fried Green Fryer Team</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-gray-200">
+                <CardContent className="p-6">
+                  <p className="text-gray-700 italic mb-4">
+                    "The difference in our fryer oil was clear. Oil-Max helped us cut our oil changes in half without sacrificing taste. It's become part of our routine."
+                  </p>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="font-semibold text-gray-800">Operations Manager</p>
+                      <p className="text-gray-600 text-sm">National Donut Chain</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-gray-200">
+                <CardContent className="p-6">
+                  <p className="text-gray-700 italic mb-4">
+                    "Our team uses Oil-Max daily — the instructions are simple, the benefits are obvious, and the results speak for themselves."
+                  </p>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="font-semibold text-gray-800">Independent Taquería Owner</p>
+                      <p className="text-gray-600 text-sm">Texas</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Sparkler Filters Legacy */}
+          <div className="bg-oilmax-light rounded-lg p-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4">Supported by Sparkler Filters</h3>
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+                Oil-Max is proudly backed by Sparkler Filters — the original inventor of the cooking oil filter and horizontal plate filter system. With nearly 100 years of innovation in industrial liquid filtration and thousands of systems installed globally, Sparkler brings a legacy of dependable engineering right to your kitchen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonials - Hidden until videos are available */}
+      {/* 
+      <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeading
             title="Video Testimonials"
@@ -260,9 +417,10 @@ const Testimonials = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Trusted By Logos */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <SectionHeading
             title="Trusted By Industry Leaders"

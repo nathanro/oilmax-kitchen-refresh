@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -53,10 +52,10 @@ const Index = () => {
 
   // Trusted by logos with real image URLs
   const trustedBy = [
-    { name: "Burger King", logo: "/lovable-uploads/burger-king-logo.png" },
-    { name: "Major Donut Chain", logo: "/lovable-uploads/donut-chain-logo.png" },
-    { name: "Sparkler Filters", logo: "/lovable-uploads/sparkler-logo.png" },
-    { name: "Restaurant Chain", logo: "/lovable-uploads/restaurant-logo.png" },
+    { name: "Burger King", logo: "/lovable-uploads/b0da71e3-4baf-41ca-a3a9-0052a6571d25.png" },
+    { name: "Major Donut Chain", logo: "/lovable-uploads/5e4184f2-d496-469f-8726-f21f96714dbe.png" },
+    { name: "Sparkler Filters", logo: "/lovable-uploads/cfdd392f-f156-4534-90f4-e945e4664245.png" },
+    { name: "Restaurant Chain", logo: "/lovable-uploads/d062a8f0-d468-470a-ab44-9135e4487f2f.png" },
   ];
 
   return (
@@ -64,7 +63,7 @@ const Index = () => {
       <HeroSection
         title={t.hero.title}
         subtitle={t.hero.subtitle}
-        backgroundImage="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&h=700&auto=format&fit=crop"
+        backgroundImage="/lovable-uploads/27e087fd-7df8-4336-8c0f-0e54e1224105.png"
       />
 
       {/* Quick Benefits Section */}
@@ -138,7 +137,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto bg-gray-50 rounded-lg p-8 shadow-md">
             <div className="flex flex-col items-center text-center">
               <svg className="w-12 h-12 text-primary opacity-50 mb-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
+                <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
               </svg>
               <p className="text-lg text-gray-700 mb-6">
                 {t.testimonials.featuredQuote}
@@ -171,23 +170,24 @@ const Index = () => {
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {trustedBy.map((company, index) => (
-              <div key={index} className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                <img src={company.logo} alt={company.name} className="h-16 object-contain" />
+              <div key={index} className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+                <img src={company.logo} alt={company.name} className="h-16 object-contain mb-2" />
+                <span className="text-sm text-gray-600 font-medium">{company.name}</span>
               </div>
             ))}
           </div>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/fda-logo.png" alt="FDA Recognized" className="h-10 w-10 object-contain mr-2" />
+              <img src="/lovable-uploads/8b3f12a8-04f2-4e91-9394-0bcab197b832.png" alt="FDA Recognized" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.fda}</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/usda-logo.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
+              <img src="/lovable-uploads/6d64327d-2bb2-4afd-b9e3-2e4e6db37742.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usda}</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/usa-logo.png" alt="Made in USA" className="h-10 w-10 object-contain mr-2" />
+              <img src="/lovable-uploads/200a1065-a8ba-45eb-89e2-b1bfd7906c8f.png" alt="Made in USA" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usa}</span>
             </div>
           </div>

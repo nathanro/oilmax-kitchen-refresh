@@ -1,114 +1,123 @@
 
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LanguageSwitch from "./LanguageSwitch";
+import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
+import { useMobile } from "@/hooks/use-mobile";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMobile();
+  const { pathname } = useLocation();
   const { language } = useLanguage();
   const t = translations[language];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const navItems = [
+    { title: t.nav.home, path: "/" },
+    { title: t.nav.howItWorks, path: "/how-it-works" },
+    { title: t.nav.benefits, path: "/benefits" },
+    { title: t.nav.products, path: "/products" },
+    { title: t.nav.testimonials, path: "/testimonials" },
+    { title: t.nav.contact, path: "/contact" },
+  ];
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
-    }`}>
+    <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png" 
-              alt="Oil-Max Logo" 
-              className="h-12" 
+            <img
+              src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png"
+              alt="Oil-Max Logo"
+              className="h-10 w-10 rounded-md"
             />
+            <span className="ml-2 text-xl font-bold text-gray-900">Oil-Max</span>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-primary font-medium">
-              {t.nav.home}
-            </Link>
-            <Link to="/how-it-works" className="text-gray-700 hover:text-primary font-medium">
-              {t.nav.howItWorks}
-            </Link>
-            <Link to="/benefits" className="text-gray-700 hover:text-primary font-medium">
-              {t.nav.benefits}
-            </Link>
-            <Link to="/products" className="text-gray-700 hover:text-primary font-medium">
-              {t.nav.products}
-            </Link>
-            <Link to="/testimonials" className="text-gray-700 hover:text-primary font-medium">
-              {t.nav.testimonials}
-            </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-primary font-medium">
-              {t.nav.contact}
-            </Link>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  pathname === item.path
+                    ? "text-primary"
+                    : "text-gray-600"
+                }`}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Actions */}
+          <div className="hidden md:flex items-center space-x-4">
             <LanguageSwitch />
-            <Button className="bg-cta hover:bg-cta-hover text-white">
-              {t.nav.getSample}
+            <Button asChild variant="default" size="sm" className="bg-cta hover:bg-cta-hover">
+              <Link to="/contact">{t.nav.getSample}</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="flex md:hidden space-x-4 items-center">
             <LanguageSwitch />
-            <button 
-              onClick={() => setIsOpen(!isOpen)} 
-              className="text-gray-700 hover:text-primary"
+            <button
+              onClick={toggleMenu}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none"
             >
-              {isOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-              )}
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-white shadow-md`}>
-        <div className="flex flex-col space-y-3 px-4 py-5">
-          <Link to="/" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            {t.nav.home}
-          </Link>
-          <Link to="/how-it-works" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            {t.nav.howItWorks}
-          </Link>
-          <Link to="/benefits" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            {t.nav.benefits}
-          </Link>
-          <Link to="/products" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            {t.nav.products}
-          </Link>
-          <Link to="/testimonials" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            {t.nav.testimonials}
-          </Link>
-          <Link to="/contact" className="text-gray-700 hover:text-primary font-medium py-2" onClick={() => setIsOpen(false)}>
-            {t.nav.contact}
-          </Link>
-          <Button className="bg-cta hover:bg-cta-hover text-white w-full" onClick={() => setIsOpen(false)}>
-            {t.nav.getSample}
-          </Button>
+      {/* Mobile Navigation */}
+      {isOpen && isMobile && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  pathname === item.path
+                    ? "text-primary bg-gray-50"
+                    : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                }`}
+                onClick={closeMenu}
+              >
+                {item.title}
+              </Link>
+            ))}
+            <div className="mt-4 px-3">
+              <Button
+                asChild
+                variant="default"
+                size="sm"
+                className="w-full bg-cta hover:bg-cta-hover"
+                onClick={closeMenu}
+              >
+                <Link to="/contact">{t.nav.getSample}</Link>
+              </Button>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      )}
+    </header>
   );
 };
 

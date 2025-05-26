@@ -1,4 +1,5 @@
 
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -180,7 +181,7 @@ const Index = () => {
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/fda-logo.png" alt="FDA Recognized" className="h-10 w-10 object-contain mr-2" />
+              <img src="/lovable-uploads/8b3f12a8-04f2-4e91-9394-0bcab197b832.png" alt="FDA Recognized" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.fda}</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
@@ -223,3 +224,4 @@ const Index = () => {
 };
 
 export default Index;
+

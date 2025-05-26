@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -19,7 +20,7 @@ const HowItWorks = () => {
       number: 2,
       title: t.howItWorks.steps.bind.name,
       description: t.howItWorks.steps.bind.description,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
+      image: "/lovable-uploads/53666174-d2a7-4970-a99b-da46478ea303.png"
     },
     {
       number: 3,

@@ -53,7 +53,7 @@ const Index = () => {
   // Trusted by logos with real image URLs
   const trustedBy = [
     { name: "Burger King", logo: "/lovable-uploads/b0da71e3-4baf-41ca-a3a9-0052a6571d25.png" },
-    { name: "Major Donut Chain", logo: "/lovable-uploads/donut-chain-logo.png" },
+    { name: "Major Donut Chain", logo: "/lovable-uploads/5e4184f2-d496-469f-8726-f21f96714dbe.png" },
     { name: "Sparkler Filters", logo: "/lovable-uploads/cfdd392f-f156-4534-90f4-e945e4664245.png" },
     { name: "Restaurant Chain", logo: "/lovable-uploads/restaurant-logo.png" },
   ];

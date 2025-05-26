@@ -1,4 +1,5 @@
 
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -55,7 +56,7 @@ const Index = () => {
   const trustedBy = [
     { name: "Burger King", logo: "https://logos-world.net/wp-content/uploads/2020/08/Burger-King-Logo.png" },
     { name: "Major Donut Chain", logo: "/lovable-uploads/donut-chain-logo.png" },
-    { name: "Sparkler Filters", logo: "/lovable-uploads/sparkler-logo.png" },
+    { name: "Sparkler Filters", logo: "/lovable-uploads/cfdd392f-f156-4534-90f4-e945e4664245.png" },
     { name: "Restaurant Chain", logo: "/lovable-uploads/restaurant-logo.png" },
   ];
 
@@ -222,3 +223,4 @@ const Index = () => {
 };
 
 export default Index;
+

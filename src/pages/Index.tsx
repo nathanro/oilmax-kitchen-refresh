@@ -185,7 +185,7 @@ const Index = () => {
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.fda}</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/usda-logo.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
+              <img src="/lovable-uploads/6d64327d-2bb2-4afd-b9e3-2e4e6db37742.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usda}</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">

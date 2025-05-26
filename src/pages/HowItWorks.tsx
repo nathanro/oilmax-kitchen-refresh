@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -32,7 +31,7 @@ const HowItWorks = () => {
       number: 4,
       title: t.howItWorks.steps.fry.name,
       description: t.howItWorks.steps.fry.description,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
+      image: "/lovable-uploads/e95cec24-9fd3-479c-a27b-10988169d918.png"
     }
   ];
 

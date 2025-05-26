@@ -97,7 +97,7 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Video Demonstration */}
+      {/* Video Demonstration - Hidden until video is available
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeading
@@ -115,6 +115,7 @@ const HowItWorks = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Technical Specifications */}
       <section className="py-20 px-4 bg-white">

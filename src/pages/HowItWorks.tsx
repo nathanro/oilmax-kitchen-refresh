@@ -14,7 +14,7 @@ const HowItWorks = () => {
       number: 1,
       title: t.howItWorks.steps.sprinkle.name,
       description: t.howItWorks.steps.sprinkle.description,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&h=500&auto=format&fit=crop"
+      image: "/lovable-uploads/a5abe078-e175-4dfb-a7f1-6c07b91dc8f3.png"
     },
     {
       number: 2,

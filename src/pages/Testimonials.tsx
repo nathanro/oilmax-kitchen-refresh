@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -121,7 +122,7 @@ const Testimonials = () => {
       <HeroSection
         title="Customer Success Stories"
         subtitle="Hear from real businesses that have transformed their operations with Oil-Max."
-        backgroundImage="/lovable-uploads/24ed6634-3a02-49f2-a631-3745b835a48e.png"
+        backgroundImage="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1400&h=700&auto=format&fit=crop"
       />
 
       {/* Featured Testimonials */}
@@ -269,31 +270,23 @@ const Testimonials = () => {
           />
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            <div className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-              <img src="https://logos-world.net/wp-content/uploads/2020/11/Burger-King-Logo.png" alt="Burger King" className="h-16 object-contain" />
-            </div>
-            <div className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-              <img src="https://logos-world.net/wp-content/uploads/2020/05/Dunkin-Logo.png" alt="Dunkin' Donuts" className="h-16 object-contain" />
-            </div>
-            <div className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-              <img src="/lovable-uploads/0abe72b1-0f68-4b7a-b63f-ae6ba054e8a4.png" alt="Sparkler Filters" className="h-16 object-contain" />
-            </div>
-            <div className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-              <img src="https://cdn-icons-png.flaticon.com/512/2515/2515183.png" alt="Restaurant Chain" className="h-16 object-contain" />
-            </div>
+            {["Burger King", "Major Donut Chain", "Sparkler Filters", "Restaurant Chain"].map((company, index) => (
+              <div key={index} className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+                <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+                  <p className="text-lg font-semibold text-gray-700">{company}</p>
+                </div>
+              </div>
+            ))}
           </div>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="https://logos-world.net/wp-content/uploads/2021/02/FDA-Logo.png" alt="FDA Recognized" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">FDA Recognized</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="https://logos-world.net/wp-content/uploads/2020/09/USDA-Logo.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">USDA Approved</span>
             </div>
             <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Made_In_The_USA_Logo.svg/1200px-Made_In_The_USA_Logo.svg.png" alt="Made in USA" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">Made in USA</span>
             </div>
           </div>

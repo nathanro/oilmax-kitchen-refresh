@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -64,7 +63,7 @@ const Index = () => {
       <HeroSection
         title={t.hero.title}
         subtitle={t.hero.subtitle}
-        backgroundImage="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&h=700&auto=format&fit=crop"
+        backgroundImage="/lovable-uploads/27e087fd-7df8-4336-8c0f-0e54e1224105.png"
       />
 
       {/* Quick Benefits Section */}

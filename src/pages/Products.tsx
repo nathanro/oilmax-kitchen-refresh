@@ -1,10 +1,8 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Wrench, Box } from "lucide-react";
-
 const Products = () => {
   return <>
       <HeroSection title="Our Products: Simple. Proven. Ready to Work." subtitle="Professional solutions for extending the life of your fryer oil." backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop" />
@@ -30,7 +28,7 @@ const Products = () => {
           <div className="mb-16">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/2">
-                <img src="/lovable-uploads/ed92be09-7974-4906-88a3-8143478cdf1b.png" alt="Sparklaid Organic Fryer Powder" className="rounded-lg shadow-lg w-full h-auto object-cover" />
+                <img alt="Sparklaid Organic Fryer Powder" className="rounded-lg shadow-lg w-full h-auto object-cover" src="/lovable-uploads/2db32a89-e5fc-4f8f-9d39-4503b102274a.jpg" />
                 <h3 className="text-xl font-semibold text-center mt-4">Sparklaid - Organic Fryer Powder</h3>
                 <p className="text-center text-gray-600 mt-2 italic">A Sparkler Filters Brand</p>
               </div>
@@ -280,5 +278,4 @@ const Products = () => {
       </section>
     </>;
 };
-
 export default Products;

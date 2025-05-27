@@ -83,17 +83,11 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">
             {t.hero.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <CTAButton 
               text="Request a Quote" 
               link="/contact" 
               variant="quote" 
-              className="text-lg px-8 py-4"
-            />
-            <CTAButton 
-              text={t.cta.sampleButton} 
-              link="/contact" 
-              variant="sample"
               className="text-lg px-8 py-4"
             />
           </div>
@@ -239,13 +233,7 @@ const Index = () => {
           <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
             {t.cta.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton 
-              text={t.cta.sampleButton} 
-              link="/contact" 
-              variant="sample" 
-              className="text-lg"
-            />
+          <div className="flex justify-center">
             <CTAButton 
               text="Request a Quote" 
               link="/contact" 

@@ -30,15 +30,9 @@ const HeroSection = ({
             {title}
           </h1>
           <p className="text-xl text-white/90 mb-8">{subtitle}</p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex justify-center">
             <CTAButton
-              text={t.cta.sampleButton}
-              link="/contact"
-              variant="sample"
-              className="text-lg"
-            />
-            <CTAButton
-              text={t.cta.quoteButton}
+              text="Request a Quote"
               link="/contact"
               variant="quote"
               className="text-lg"

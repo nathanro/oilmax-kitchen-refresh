@@ -188,7 +188,7 @@ const Index = () => {
             </div>
             {/* Enhanced Made in USA section */}
             <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
-              <img src="/lovable-uploads/200a1065-a8ba-45eb-89e2-b1bfd7906c8f.png" alt="Made in USA" className="h-14 w-14 object-contain mr-3" />
+              <img alt="Made in USA" className="h-14 w-14 object-contain mr-3" src="/lovable-uploads/94dda56b-e179-48ca-971a-b2cfcf05563d.png" />
               <div>
                 <span className="text-blue-700 font-bold text-lg">{t.trustedBy.certifications.usa}</span>
                 <p className="text-blue-600 text-sm">Since 1960s</p>

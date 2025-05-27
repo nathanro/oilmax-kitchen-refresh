@@ -29,13 +29,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center">
-              <img
-                src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png"
-                alt="Oil-Max Logo"
-                className="h-10 w-10 rounded-md bg-white"
-              />
-              <span className="ml-2 text-xl font-bold">Oil-Max</span>
+            <div className="flex flex-col items-start">
+              <div className="flex items-center mb-2">
+                <img
+                  src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png"
+                  alt="Oil-Max Logo"
+                  className="h-12 w-12 rounded-md bg-white"
+                />
+                <span className="ml-3 text-xl font-bold">Oil-Max</span>
+              </div>
+              <span className="text-sm text-gray-300 ml-15">Cooking Oil Filtration</span>
             </div>
             <p className="text-gray-400 max-w-xs">
               Better Oil. Better Food. Bigger Margins. Extending fryer oil life since the 1960s.

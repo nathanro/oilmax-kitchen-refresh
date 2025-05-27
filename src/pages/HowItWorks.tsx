@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -41,25 +40,25 @@ const HowItWorks = () => {
       number: 1,
       title: "Built-In Filtration",
       description: "Our Oil-Max filter systems feature advanced multi-stage filtration designed specifically for commercial kitchens.",
-      image: "/lovable-uploads/97005545-76a4-4e86-b001-9673343f5b44.png"
+      image: "/lovable-uploads/0541a846-38a4-4c60-84fa-eb3a079ead54.png"
     },
     {
       number: 2,
       title: "Superior Capture Rate",
       description: "The specialized filter media captures particles and impurities more effectively than standard filtration systems.",
-      image: "/lovable-uploads/53666174-d2a7-4970-a99b-da46478ea303.png"
+      image: "/lovable-uploads/94dda56b-e179-48ca-971a-b2cfcf05563d.png"
     },
     {
       number: 3,
       title: "Easy Maintenance",
       description: "Simple filter replacement and cleaning procedures keep your system running efficiently with minimal downtime.",
-      image: "/lovable-uploads/354a50e5-26f5-4d4a-8878-565397980afc.png"
+      image: "/lovable-uploads/200a1065-a8ba-45eb-89e2-b1bfd7906c8f.png"
     },
     {
       number: 4,
       title: "Maximum Performance",
       description: "When combined with Sparklaid powder, our filters deliver the ultimate oil cleaning performance for extended oil life.",
-      image: "/lovable-uploads/fe972632-e93f-4d4b-808f-a30c4937f3b7.png"
+      image: "/lovable-uploads/cfdd392f-f156-4534-90f4-e945e4664245.png"
     }
   ];
 
@@ -280,22 +279,14 @@ const HowItWorks = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Try the Complete Oil-Max System?</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-            Experience the benefits of Sparklaid powder in your own kitchen with a free sample, and learn how Oil-Max filters can maximize your results.
+            Experience the benefits of the complete Oil-Max system in your kitchen and learn how our filters can maximize your oil life extension results.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton 
-              text="Get a Free Sparklaid Sample" 
-              link="/contact" 
-              variant="sample" 
-              className="text-lg"
-            />
-            <CTAButton 
-              text="Request a Filter Quote" 
-              link="/contact" 
-              variant="quote"
-              className="text-lg"
-            />
-          </div>
+          <CTAButton 
+            text="Request a System Quote" 
+            link="/contact" 
+            variant="quote"
+            className="text-lg"
+          />
         </div>
       </section>
     </>

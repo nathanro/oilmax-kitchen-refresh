@@ -300,7 +300,7 @@ const Contact = () => {
                     </svg>
                     <div>
                       <h4 className="font-medium text-gray-800">Address</h4>
-                      <p className="text-gray-600 mt-1">123 Main Street, Suite 101<br />Houston, TX 77001</p>
+                      <p className="text-gray-600 mt-1">101 North Loop 336 East<br />Conroe, Texas, USA 77301</p>
                     </div>
                   </div>
                   
@@ -325,8 +325,7 @@ const Contact = () => {
                     </svg>
                     <div>
                       <h4 className="font-medium text-gray-800">Phone</h4>
-                      <p className="text-gray-600 mt-1">+1 (800) 123-4567</p>
-                      <p className="text-gray-600">+1 (713) 987-6543</p>
+                      <p className="text-gray-600 mt-1">(936) 756-4471</p>
                     </div>
                   </div>
                   
@@ -342,6 +341,8 @@ const Contact = () => {
                   </div>
                 </div>
                 
+                {/* Social media icons hidden temporarily */}
+                {/*
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <h4 className="font-medium text-gray-800 mb-4">Connect With Us</h4>
                   <div className="flex space-x-4">
@@ -367,6 +368,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
+                */}
               </div>
             </div>
           </div>

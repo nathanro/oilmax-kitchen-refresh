@@ -35,15 +35,20 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img
-              src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png"
-              alt="Oil-Max Logo"
-              className="h-10 w-10 rounded-md"
-            />
-            <span className="ml-2 text-xl font-bold text-gray-900">Oil-Max</span>
+            <div className="flex flex-col items-center">
+              <img
+                src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png"
+                alt="Oil-Max Logo"
+                className="h-12 w-16 rounded-md"
+              />
+              <span className="text-xs font-medium text-gray-600 mt-1">Cooking Oil Filtration</span>
+            </div>
+            <div className="ml-3">
+              <span className="text-xl font-bold text-gray-900">Oil-Max</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

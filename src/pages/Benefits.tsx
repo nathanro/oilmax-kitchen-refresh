@@ -1,10 +1,59 @@
 
+import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 const Benefits = () => {
+  const [fryers, setFryers] = useState<string>("");
+  const [changesPerMonth, setChangesPerMonth] = useState<string>("");
+  const [oilCapacity, setOilCapacity] = useState<string>("");
+  const [costPerGallon, setCostPerGallon] = useState<string>("");
+  const [savings, setSavings] = useState<number | null>(null);
+  const [error, setError] = useState<string>("");
+
+  const calculateSavings = () => {
+    // Reset states
+    setError("");
+    setSavings(null);
+
+    // Parse inputs
+    const fryersNum = parseInt(fryers);
+    const changesNum = parseInt(changesPerMonth);
+    const capacityNum = parseFloat(oilCapacity);
+    const costNum = parseFloat(costPerGallon);
+
+    // Validation
+    if (!fryers || !changesPerMonth || !oilCapacity || !costPerGallon) {
+      setError("Please enter valid values above 0 for all fields.");
+      return;
+    }
+
+    if (fryersNum < 1 || changesNum < 1 || capacityNum <= 0 || costNum <= 0) {
+      setError("Please enter valid values above 0 for all fields.");
+      return;
+    }
+
+    if (isNaN(fryersNum) || isNaN(changesNum) || isNaN(capacityNum) || isNaN(costNum)) {
+      setError("Please enter valid values above 0 for all fields.");
+      return;
+    }
+
+    // Calculate baseline annual cost
+    const baseline = fryersNum * changesNum * 12 * capacityNum * costNum;
+    
+    // Calculate reduced cost with Oil-Max (3.5x extension factor)
+    const reduced = fryersNum * (changesNum / 3.5) * 12 * capacityNum * costNum;
+    
+    // Calculate annual savings and round to nearest dollar
+    const annualSavings = Math.round(baseline - reduced);
+    
+    setSavings(annualSavings);
+  };
+
   const benefitsList = [
     {
       icon: "💸",
@@ -116,47 +165,71 @@ const Benefits = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div>
                 <label className="block text-gray-700 font-medium mb-2">Number of Fryers</label>
-                <input 
+                <Input 
                   type="number" 
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  value={fryers}
+                  onChange={(e) => setFryers(e.target.value)}
                   placeholder="3"
+                  min="1"
                 />
               </div>
               <div>
                 <label className="block text-gray-700 font-medium mb-2">Oil Changes per Month (per fryer)</label>
-                <input 
+                <Input 
                   type="number" 
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  value={changesPerMonth}
+                  onChange={(e) => setChangesPerMonth(e.target.value)}
                   placeholder="4"
+                  min="1"
                 />
               </div>
               <div>
                 <label className="block text-gray-700 font-medium mb-2">Oil Capacity (gallons per fryer)</label>
-                <input 
+                <Input 
                   type="number" 
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="5"
+                  value={oilCapacity}
+                  onChange={(e) => setOilCapacity(e.target.value)}
+                  placeholder="35"
+                  min="0.1"
+                  step="0.1"
                 />
               </div>
               <div>
                 <label className="block text-gray-700 font-medium mb-2">Cost per Gallon of Oil ($)</label>
-                <input 
+                <Input 
                   type="number" 
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  value={costPerGallon}
+                  onChange={(e) => setCostPerGallon(e.target.value)}
                   placeholder="45"
+                  min="0.01"
+                  step="0.01"
                 />
               </div>
             </div>
             
-            <button className="bg-primary hover:bg-oilmax-dark text-white font-semibold py-2 px-6 rounded-md w-full">
+            <Button 
+              onClick={calculateSavings}
+              className="bg-primary hover:bg-oilmax-dark text-white font-semibold py-2 px-6 rounded-md w-full"
+            >
               Calculate My Savings
-            </button>
+            </Button>
             
             <div className="mt-8 p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-center">Your Estimated Annual Savings</h3>
               <div className="text-center">
-                <span className="text-4xl font-bold text-primary">$7,560</span>
-                <p className="text-gray-600 mt-2">Based on your inputs and an average 3.5x oil life extension</p>
+                {error ? (
+                  <p className="text-red-600 font-medium">{error}</p>
+                ) : savings !== null ? (
+                  <>
+                    <span className="text-4xl font-bold text-primary">${savings.toLocaleString()}</span>
+                    <p className="text-gray-600 mt-2">Based on your inputs and an average 3.5x oil life extension</p>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-4xl font-bold text-primary">$0</span>
+                    <p className="text-gray-600 mt-2">Enter your values above and click calculate to see your savings</p>
+                  </>
+                )}
               </div>
             </div>
             

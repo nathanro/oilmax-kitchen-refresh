@@ -115,7 +115,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-gray-400 transition-colors"
               >
-                PubliExpert
+                PubliExpert LLC
               </a>
             </p>
           </div>

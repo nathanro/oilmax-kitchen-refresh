@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
+
 const Index = () => {
   const {
     language
@@ -52,7 +53,8 @@ const Index = () => {
     name: "Restaurant Chain",
     logo: "/lovable-uploads/d062a8f0-d468-470a-ab44-9135e4487f2f.png"
   }];
-  return <>
+  return (
+    <>
       {/* Hero Section with Enhanced Logo Display */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{
@@ -171,20 +173,28 @@ const Index = () => {
           <SectionHeading title={t.trustedBy.title} subtitle={t.trustedBy.subtitle} />
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {trustedBy.map((company, index) => <div key={index} className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+            {trustedBy.map((company, index) => (
+              <div key={index} className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
                 <img src={company.logo} alt={company.name} className="h-16 object-contain mb-2" />
                 <span className="text-sm text-gray-600 font-medium">{company.name}</span>
-              </div>)}
+              </div>
+            ))}
           </div>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
-            <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/8b3f12a8-04f2-4e91-9394-0bcab197b832.png" alt="FDA Recognized" className="h-10 w-10 object-contain mr-2" />
-              <span className="text-gray-700 font-medium">{t.trustedBy.certifications.fda}</span>
+            <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
+              <img src="/lovable-uploads/8b3f12a8-04f2-4e91-9394-0bcab197b832.png" alt="FDA Recognized" className="h-14 w-14 object-contain mr-3" />
+              <div>
+                <span className="text-blue-700 font-bold text-lg">{t.trustedBy.certifications.fda}</span>
+                <p className="text-blue-600 text-sm">Since 1960s</p>
+              </div>
             </div>
-            <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/6d64327d-2bb2-4afd-b9e3-2e4e6db37742.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
-              <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usda}</span>
+            <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
+              <img src="/lovable-uploads/6d64327d-2bb2-4afd-b9e3-2e4e6db37742.png" alt="USDA Approved" className="h-14 w-14 object-contain mr-3" />
+              <div>
+                <span className="text-blue-700 font-bold text-lg">{t.trustedBy.certifications.usda}</span>
+                <p className="text-blue-600 text-sm">Since 1960s</p>
+              </div>
             </div>
             {/* Enhanced Made in USA section */}
             <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
@@ -210,6 +220,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </>;
+    </>
+  );
 };
+
 export default Index;

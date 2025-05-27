@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -264,7 +263,7 @@ const Benefits = () => {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-full md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=800&h=600&auto=format&fit=crop" 
+                src="/lovable-uploads/eda3412b-debf-45f6-a0e1-1cc652f042f2.png" 
                 alt="Environmental Benefits" 
                 className="rounded-lg shadow-lg w-full h-auto object-cover"
               />
@@ -316,15 +315,9 @@ const Benefits = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Experience the Benefits Yourself</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-            Ready to start saving money and improving your food quality? Request a free sample of Oil-Max today.
+            Ready to start saving money and improving your food quality? Request a quote today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton 
-              text="Get a Free Sample" 
-              link="/contact" 
-              variant="sample" 
-              className="text-lg"
-            />
+          <div className="flex justify-center">
             <CTAButton 
               text="Request a Quote" 
               link="/contact" 

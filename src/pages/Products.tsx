@@ -1,8 +1,10 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Wrench, Box } from "lucide-react";
+
 const Products = () => {
   return <>
       <HeroSection title="Our Products: Simple. Proven. Ready to Work." subtitle="Professional solutions for extending the life of your fryer oil." backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop" />
@@ -11,22 +13,36 @@ const Products = () => {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           
-          {/* Oil-Max Organic Fryer Powder */}
+          {/* System Overview */}
+          <div className="mb-16 text-center">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+              <div className="flex items-center justify-center mb-4">
+                <Wrench className="w-8 h-8 text-blue-600 mr-3" />
+                <h2 className="text-2xl font-bold text-blue-800">The Oil-Max System</h2>
+              </div>
+              <p className="text-lg text-blue-700 max-w-4xl mx-auto">
+                Our complete solution combines two essential products: Sparklaid filtration powder and Oil-Max physical filter systems, working together to maximize your fryer oil life.
+              </p>
+            </div>
+          </div>
+          
+          {/* Sparklaid - Filtration Powder */}
           <div className="mb-16">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/2">
-                <img src="/lovable-uploads/ed92be09-7974-4906-88a3-8143478cdf1b.png" alt="Oil-Max Organic Fryer Powder" className="rounded-lg shadow-lg w-full h-auto object-cover" />
-                <h3 className="text-xl font-semibold text-center mt-4">Oil-Max Organic Fryer Powder</h3>
+                <img src="/lovable-uploads/ed92be09-7974-4906-88a3-8143478cdf1b.png" alt="Sparklaid Organic Fryer Powder" className="rounded-lg shadow-lg w-full h-auto object-cover" />
+                <h3 className="text-xl font-semibold text-center mt-4">Sparklaid - Organic Fryer Powder</h3>
+                <p className="text-center text-gray-600 mt-2 italic">A Sparkler Filters Brand</p>
               </div>
               <div className="w-full md:w-1/2">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                     <span className="text-white text-lg">🟩</span>
                   </div>
-                  <h2 className="text-2xl font-bold">Oil-Max Organic Fryer Powder</h2>
+                  <h2 className="text-2xl font-bold">Sparklaid - Organic Fryer Powder</h2>
                 </div>
                 <p className="text-lg text-gray-700 mb-6">
-                  Our signature filtration powder — made from all-natural, food-safe ingredients.
+                  Our signature filtration powder — made from all-natural, food-safe ingredients that's added directly to your fryer oil.
                 </p>
                 
                 <ul className="space-y-3 mb-6">
@@ -57,28 +73,27 @@ const Products = () => {
                 
                 <div className="flex flex-wrap gap-3">
                   <CTAButton text="Request a Quote" link="/contact" variant="quote" />
-                  <CTAButton text="Get a Free Sample" link="/contact" variant="sample" />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Simple Filtration Systems */}
+          {/* Oil-Max Filters - Physical Systems */}
           <div className="mb-16 border-t border-gray-100 pt-16">
             <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
               <div className="w-full md:w-1/2">
-                <img alt="Simple Filtration Systems" className="rounded-lg shadow-lg w-full h-auto object-cover" src="/lovable-uploads/5271172d-9b9b-4b9f-88f5-641bfcb382bb.jpg" />
-                <h3 className="text-xl font-semibold text-center mt-4">Simple Filtration Systems</h3>
+                <img alt="Oil-Max Filtration Systems" className="rounded-lg shadow-lg w-full h-auto object-cover" src="/lovable-uploads/5271172d-9b9b-4b9f-88f5-641bfcb382bb.jpg" />
+                <h3 className="text-xl font-semibold text-center mt-4">Oil-Max Filtration Systems</h3>
               </div>
               <div className="w-full md:w-1/2">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                     <Wrench className="w-4 h-4 text-white" />
                   </div>
-                  <h2 className="text-2xl font-bold">Simple Filtration Systems</h2>
+                  <h2 className="text-2xl font-bold">Oil-Max Filtration Systems</h2>
                 </div>
                 <p className="text-lg text-gray-700 mb-6">
-                  Built for kitchens that need durable, easy-to-use equipment.
+                  Physical filter systems we manufacture and sell. Built for kitchens that need durable, easy-to-use equipment.
                 </p>
                 
                 <ul className="space-y-3 mb-6">
@@ -101,12 +116,34 @@ const Products = () => {
                 </ul>
 
                 <p className="text-gray-600 mb-6 italic">
-                  From single fryer stations to multi-basket heavy use setups, these systems are field-tested and kitchen-proof.
+                  From single fryer stations to multi-basket heavy use setups, these systems are field-tested and kitchen-proof. While Sparklaid works with any fryer filter, our Oil-Max systems are the preferred choice for optimal results.
                 </p>
+                
+                {/* Product Images Row */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-4 text-center">Our Filter Systems</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="text-center">
+                      <img src="/lovable-uploads/95c3548e-3f0d-4cf8-98c1-5961df0ae5b1.png" alt="Oil-Max Filter System 1" className="w-full h-32 object-cover rounded-lg shadow-md" />
+                      <p className="text-sm text-gray-600 mt-2">Compact System</p>
+                    </div>
+                    <div className="text-center">
+                      <img src="/lovable-uploads/43b73590-e0a4-481a-91c4-5e5212f53331.png" alt="Oil-Max Filter System 2" className="w-full h-32 object-cover rounded-lg shadow-md" />
+                      <p className="text-sm text-gray-600 mt-2">Standard System</p>
+                    </div>
+                    <div className="text-center">
+                      <img src="/lovable-uploads/0541a846-38a4-4c60-84fa-eb3a079ead54.png" alt="Oil-Max Filter System 3" className="w-full h-32 object-cover rounded-lg shadow-md" />
+                      <p className="text-sm text-gray-600 mt-2">Heavy Duty System</p>
+                    </div>
+                    <div className="text-center">
+                      <img src="/lovable-uploads/0bc1e1c8-2174-4c5d-9669-49cfccd9f53e.png" alt="Oil-Max Filter System 4" className="w-full h-32 object-cover rounded-lg shadow-md" />
+                      <p className="text-sm text-gray-600 mt-2">Professional System</p>
+                    </div>
+                  </div>
+                </div>
                 
                 <div className="flex flex-wrap gap-3">
                   <CTAButton text="Request a Quote" link="/contact" variant="quote" />
-                  <CTAButton text="Learn More" link="/contact" variant="sample" />
                 </div>
               </div>
             </div>
@@ -233,7 +270,7 @@ const Products = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Try Oil-Max?</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-            Experience the benefits of Oil-Max in your own kitchen with a free sample.
+            Experience the benefits of Oil-Max in your own kitchen with a free sample of Sparklaid.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton text="Get a Free Sample" link="/contact" variant="sample" className="text-lg" />
@@ -243,4 +280,5 @@ const Products = () => {
       </section>
     </>;
 };
+
 export default Products;

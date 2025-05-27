@@ -60,11 +60,45 @@ const Index = () => {
 
   return (
     <>
-      <HeroSection
-        title={t.hero.title}
-        subtitle={t.hero.subtitle}
-        backgroundImage="/lovable-uploads/27e087fd-7df8-4336-8c0f-0e54e1224105.png"
-      />
+      {/* Hero Section with Enhanced Logo Display */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: "url('/lovable-uploads/27e087fd-7df8-4336-8c0f-0e54e1224105.png')" }}
+        />
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          {/* Large Logo Display */}
+          <div className="mb-8">
+            <img
+              src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png"
+              alt="Oil-Max Logo"
+              className="h-32 w-32 mx-auto rounded-lg bg-white/90 p-4 shadow-2xl"
+            />
+            <p className="text-xl text-gray-300 mt-4 font-medium">Professional Cooking Oil Filtration</p>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            {t.hero.title}
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">
+            {t.hero.subtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <CTAButton 
+              text="Request a Quote" 
+              link="/contact" 
+              variant="quote" 
+              className="text-lg px-8 py-4"
+            />
+            <CTAButton 
+              text={t.cta.sampleButton} 
+              link="/contact" 
+              variant="sample"
+              className="text-lg px-8 py-4"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Quick Benefits Section */}
       <section className="py-20 px-4 bg-white">
@@ -92,8 +126,8 @@ const Index = () => {
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeading
-            title={t.howItWorks.title}
-            subtitle={t.howItWorks.subtitle}
+            title="How Sparklaid Works"
+            subtitle="Our organic filtration powder integrates seamlessly with your existing fryer system."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -160,7 +194,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trusted By Section */}
+      {/* Trusted By Section with Enhanced Made in USA */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeading
@@ -186,9 +220,13 @@ const Index = () => {
               <img src="/lovable-uploads/6d64327d-2bb2-4afd-b9e3-2e4e6db37742.png" alt="USDA Approved" className="h-10 w-10 object-contain mr-2" />
               <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usda}</span>
             </div>
-            <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <img src="/lovable-uploads/200a1065-a8ba-45eb-89e2-b1bfd7906c8f.png" alt="Made in USA" className="h-10 w-10 object-contain mr-2" />
-              <span className="text-gray-700 font-medium">{t.trustedBy.certifications.usa}</span>
+            {/* Enhanced Made in USA section */}
+            <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
+              <img src="/lovable-uploads/200a1065-a8ba-45eb-89e2-b1bfd7906c8f.png" alt="Made in USA" className="h-14 w-14 object-contain mr-3" />
+              <div>
+                <span className="text-blue-700 font-bold text-lg">{t.trustedBy.certifications.usa}</span>
+                <p className="text-blue-600 text-sm">Since 1960s</p>
+              </div>
             </div>
           </div>
         </div>
@@ -209,7 +247,7 @@ const Index = () => {
               className="text-lg"
             />
             <CTAButton 
-              text={t.cta.quoteButton} 
+              text="Request a Quote" 
               link="/contact" 
               variant="quote"
               className="text-lg"

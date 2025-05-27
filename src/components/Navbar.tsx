@@ -67,7 +67,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSwitch />
             <Button asChild variant="default" size="sm" className="bg-cta hover:bg-cta-hover">
-              <Link to="/contact">{t.nav.getSample}</Link>
+              <Link to="/contact">Request a Quote</Link>
             </Button>
           </div>
 
@@ -111,7 +111,7 @@ const Navbar = () => {
                 className="w-full bg-cta hover:bg-cta-hover"
                 onClick={closeMenu}
               >
-                <Link to="/contact">{t.nav.getSample}</Link>
+                <Link to="/contact">Request a Quote</Link>
               </Button>
             </div>
           </div>

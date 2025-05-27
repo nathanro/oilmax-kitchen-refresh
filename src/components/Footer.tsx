@@ -1,41 +1,49 @@
-
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
 import LanguageSwitch from "./LanguageSwitch";
-
 const Footer = () => {
-  const { language } = useLanguage();
+  const {
+    language
+  } = useLanguage();
   const t = translations[language];
-
-  const navigation = [
-    { name: t.nav.home, href: "/" },
-    { name: t.nav.howItWorks, href: "/how-it-works" },
-    { name: t.nav.benefits, href: "/benefits" },
-    { name: t.nav.products, href: "/products" },
-    { name: t.nav.testimonials, href: "/testimonials" },
-    { name: t.nav.contact, href: "/contact" },
-  ];
-
-  const legal = [
-    { name: t.footer.links.privacy, href: "#" },
-    { name: t.footer.links.terms, href: "#" },
-    { name: t.footer.links.contact, href: "/contact" },
-  ];
-
-  return (
-    <footer className="bg-gray-900 text-white">
+  const navigation = [{
+    name: t.nav.home,
+    href: "/"
+  }, {
+    name: t.nav.howItWorks,
+    href: "/how-it-works"
+  }, {
+    name: t.nav.benefits,
+    href: "/benefits"
+  }, {
+    name: t.nav.products,
+    href: "/products"
+  }, {
+    name: t.nav.testimonials,
+    href: "/testimonials"
+  }, {
+    name: t.nav.contact,
+    href: "/contact"
+  }];
+  const legal = [{
+    name: t.footer.links.privacy,
+    href: "#"
+  }, {
+    name: t.footer.links.terms,
+    href: "#"
+  }, {
+    name: t.footer.links.contact,
+    href: "/contact"
+  }];
+  return <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex flex-col items-start">
               <div className="flex items-center mb-2">
-                <img
-                  src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png"
-                  alt="Oil-Max Logo"
-                  className="h-12 w-12 rounded-md bg-white"
-                />
+                <img src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png" alt="Oil-Max Logo" className="h-22 w-32 rounded-md bg-white" />
                 <span className="ml-3 text-xl font-bold">Oil-Max</span>
               </div>
               <span className="text-sm text-gray-300 ml-15">Cooking Oil Filtration</span>
@@ -45,7 +53,7 @@ const Footer = () => {
             </p>
             {/* Social media icons hidden temporarily */}
             {/* 
-            <div className="flex space-x-4">
+             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
                 <span className="sr-only">Facebook</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -64,21 +72,19 @@ const Footer = () => {
                   <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
                 </svg>
               </a>
-            </div>
-            */}
+             </div>
+             */}
           </div>
 
           {/* Navigation */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
-              {navigation.map((item) => (
-                <li key={item.name}>
+              {navigation.map(item => <li key={item.name}>
                   <Link to={item.href} className="text-gray-400 hover:text-white transition-colors">
                     {item.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -116,18 +122,14 @@ const Footer = () => {
           </div>
           <div className="mt-4 md:mt-0 flex flex-col md:flex-row items-center">
             <div className="flex space-x-6 mb-4 md:mb-0 md:mr-8">
-              {legal.map((item) => (
-                <Link key={item.name} to={item.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+              {legal.map(item => <Link key={item.name} to={item.href} className="text-gray-400 hover:text-white transition-colors text-sm">
                   {item.name}
-                </Link>
-              ))}
+                </Link>)}
             </div>
             <LanguageSwitch />
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

@@ -330,6 +330,18 @@ const Contact = () => {
                       <p className="text-gray-600">Saturday - Sunday: Closed</p>
                     </div>
                   </div>
+
+                  {/* Location Map */}
+                  <div className="mt-6">
+                    <h4 className="font-medium text-gray-800 mb-3">Our Location</h4>
+                    <div className="rounded-lg overflow-hidden shadow-sm">
+                      <img 
+                        src="/lovable-uploads/4bc3aa6c-7d2d-4faa-829e-b228a4826ccd.png" 
+                        alt="Map showing Sparkler Filters location at 101 North Loop 336 East, Conroe, Texas" 
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

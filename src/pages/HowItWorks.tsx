@@ -40,25 +40,25 @@ const HowItWorks = () => {
       number: 1,
       title: "Built-In Filtration",
       description: "Our Oil-Max filter systems feature advanced multi-stage filtration designed specifically for commercial kitchens.",
-      image: "/lovable-uploads/0541a846-38a4-4c60-84fa-eb3a079ead54.png"
+      image: "/lovable-uploads/9f0bda39-e021-40f2-a45e-0119db9ec229.png"
     },
     {
       number: 2,
       title: "Superior Capture Rate",
       description: "The specialized filter media captures particles and impurities more effectively than standard filtration systems.",
-      image: "/lovable-uploads/94dda56b-e179-48ca-971a-b2cfcf05563d.png"
+      image: "/lovable-uploads/887c55ba-1be0-4b87-bdb5-b343035e789d.png"
     },
     {
       number: 3,
       title: "Easy Maintenance",
       description: "Simple filter replacement and cleaning procedures keep your system running efficiently with minimal downtime.",
-      image: "/lovable-uploads/200a1065-a8ba-45eb-89e2-b1bfd7906c8f.png"
+      image: "/lovable-uploads/b306df30-43df-4748-9a48-2c53c20e5236.png"
     },
     {
       number: 4,
       title: "Maximum Performance",
       description: "When combined with Sparklaid powder, our filters deliver the ultimate oil cleaning performance for extended oil life.",
-      image: "/lovable-uploads/cfdd392f-f156-4534-90f4-e945e4664245.png"
+      image: "/lovable-uploads/2f8544ac-c71f-4726-b908-17d13cefee0b.png"
     }
   ];
 

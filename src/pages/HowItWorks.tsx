@@ -25,7 +25,7 @@ const HowItWorks = () => {
       number: 3,
       title: "Filter As Usual",
       description: "Use your current filtration system or pair with the Oil-Max Filter System. The powder goes to work helping your filter capture more — and faster.",
-      image: "/lovable-uploads/d1713f88-7c34-4cfa-936b-e683c695ac5c.png"
+      image: "/lovable-uploads/c09a7a98-7045-4b05-bc0c-b0eab26b4475.png"
     },
     {
       number: 4,

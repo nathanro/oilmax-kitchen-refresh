@@ -1,42 +1,30 @@
+
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
 import LanguageSwitch from "./LanguageSwitch";
+
 const Footer = () => {
-  const {
-    language
-  } = useLanguage();
+  const { language } = useLanguage();
   const t = translations[language];
-  const navigation = [{
-    name: t.nav.home,
-    href: "/"
-  }, {
-    name: t.nav.howItWorks,
-    href: "/how-it-works"
-  }, {
-    name: t.nav.benefits,
-    href: "/benefits"
-  }, {
-    name: t.nav.products,
-    href: "/products"
-  }, {
-    name: t.nav.testimonials,
-    href: "/testimonials"
-  }, {
-    name: t.nav.contact,
-    href: "/contact"
-  }];
-  const legal = [{
-    name: t.footer.links.privacy,
-    href: "#"
-  }, {
-    name: t.footer.links.terms,
-    href: "#"
-  }, {
-    name: t.footer.links.contact,
-    href: "/contact"
-  }];
-  return <footer className="bg-gray-900 text-white">
+  
+  const navigation = [
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.howItWorks, href: "/how-it-works" },
+    { name: t.nav.benefits, href: "/benefits" },
+    { name: t.nav.products, href: "/products" },
+    { name: t.nav.testimonials, href: "/testimonials" },
+    { name: t.nav.contact, href: "/contact" }
+  ];
+  
+  const legal = [
+    { name: t.footer.links.privacy, href: "#" },
+    { name: t.footer.links.terms, href: "#" },
+    { name: t.footer.links.contact, href: "/contact" }
+  ];
+
+  return (
+    <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -119,17 +107,36 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <p className="text-gray-400">{t.footer.copyright}</p>
             <p className="text-gray-400 text-sm mt-2">Part of the Sparkler Filters Family | Built in the USA | Real Support, Real People</p>
+            <p className="text-gray-500 text-xs mt-2">
+              powered by{" "}
+              <a 
+                href="https://publiexpert.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-400 transition-colors"
+              >
+                PubliExpert
+              </a>
+            </p>
           </div>
           <div className="mt-4 md:mt-0 flex flex-col md:flex-row items-center">
             <div className="flex space-x-6 mb-4 md:mb-0 md:mr-8">
-              {legal.map(item => <Link key={item.name} to={item.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+              {legal.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
                   {item.name}
-                </Link>)}
+                </Link>
+              ))}
             </div>
             <LanguageSwitch />
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
-
 const Index = () => {
   const {
     language
@@ -53,8 +52,7 @@ const Index = () => {
     name: "Restaurant Chain",
     logo: "/lovable-uploads/d062a8f0-d468-470a-ab44-9135e4487f2f.png"
   }];
-  return (
-    <>
+  return <>
       {/* Hero Section with Enhanced Logo Display */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{
@@ -64,7 +62,7 @@ const Index = () => {
           {/* Large Logo Display */}
           <div className="mb-8">
             <img src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png" alt="Oil-Max Logo" className="h-52 w-72 mx-auto rounded-lg bg-white/90 p-4 shadow-2xl" />
-            <p className="text-xl text-gray-300 mt-4 font-medium">Professional Cooking Oil Filtration</p>
+            
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -173,12 +171,10 @@ const Index = () => {
           <SectionHeading title={t.trustedBy.title} subtitle={t.trustedBy.subtitle} />
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {trustedBy.map((company, index) => (
-              <div key={index} className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+            {trustedBy.map((company, index) => <div key={index} className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
                 <img src={company.logo} alt={company.name} className="h-16 object-contain mb-2" />
                 <span className="text-sm text-gray-600 font-medium">{company.name}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
@@ -220,8 +216,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Index;

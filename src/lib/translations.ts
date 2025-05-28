@@ -1,4 +1,3 @@
-
 import { Language } from "@/context/LanguageContext";
 
 export const translations: Record<Language, {
@@ -161,7 +160,7 @@ export const translations: Record<Language, {
     },
     testimonials: {
       title: "What Our Customers Say",
-      subtitle: "Hear from restaurant owners and kitchen staff who use Oil-Max every day.",
+      subtitle: "Hear from others who use Oil-Max every day.",
       readMoreLink: "Read more testimonials",
       featuredQuote: "Since switching to Oil-Max, we've reduced our oil costs by over 40% and our customers have noticed the improvement in food quality. It's simple to use and the results speak for themselves.",
       featuredName: "Michael Johnson",
@@ -252,7 +251,7 @@ export const translations: Record<Language, {
     },
     testimonials: {
       title: "Lo Que Dicen Nuestros Clientes",
-      subtitle: "Escuche a los dueños de restaurantes y al personal de cocina que usan Oil-Max todos los días.",
+      subtitle: "Escuche a otros que usan Oil-Max todos los días.",
       readMoreLink: "Leer más testimonios",
       featuredQuote: "Desde que cambiamos a Oil-Max, hemos reducido nuestros costos de aceite en más del 40% y nuestros clientes han notado la mejora en la calidad de los alimentos. Es simple de usar y los resultados hablan por sí mismos.",
       featuredName: "Michael Johnson",

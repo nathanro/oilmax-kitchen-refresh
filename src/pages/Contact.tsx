@@ -13,6 +13,8 @@ const Contact = () => {
   } = useToast();
   const [formType, setFormType] = useState("sample");
   const [honeypot, setHoneypot] = useState("");
+  const [showVideo, setShowVideo] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -296,14 +298,37 @@ const Contact = () => {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <video 
-                className="w-full h-64 object-cover" 
-                controls
-                preload="metadata"
-              >
-                <source src="https://storage.googleapis.com/msgsndr/nmW3gLctihiAASowE1dC/media/6837b19ef362d6a4b8aced34.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <div className="relative">
+                {!showVideo ? (
+                  <div 
+                    className="relative cursor-pointer group"
+                    onClick={() => setShowVideo(true)}
+                  >
+                    <img 
+                      src="/lovable-uploads/d41ede06-63a6-4fd6-9fb6-02795a5fdbba.png"
+                      alt="Video cover - Sparkler Filters Inc."
+                      className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all">
+                      <div className="bg-white bg-opacity-90 rounded-full p-4 group-hover:scale-110 transition-transform">
+                        <svg className="w-8 h-8 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <video 
+                    className="w-full h-64 object-cover" 
+                    controls
+                    autoPlay
+                    preload="metadata"
+                  >
+                    <source src="https://storage.googleapis.com/msgsndr/nmW3gLctihiAASowE1dC/media/6837b19ef362d6a4b8aced34.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Sparkler Filters Inc.</h3>
                 <p className="text-gray-600">The home of Oil-Max production, proudly serving the food service industry with innovative filtration solutions.</p>

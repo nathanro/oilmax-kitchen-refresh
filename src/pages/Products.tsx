@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -71,6 +72,7 @@ const Products = () => {
                 
                 <div className="flex flex-wrap gap-3">
                   <CTAButton text="Request a Quote" link="/contact" variant="quote" />
+                  <CTAButton text="Order Free Sample" link="/contact" variant="sample" />
                 </div>
               </div>
             </div>
@@ -124,24 +126,34 @@ const Products = () => {
                     <div className="text-center">
                       <img src="/lovable-uploads/95c3548e-3f0d-4cf8-98c1-5961df0ae5b1.png" alt="Oil-Max Filter System 1" className="w-full h-32 object-cover rounded-lg shadow-md" />
                       <p className="text-sm text-gray-600 mt-2">Compact System</p>
+                      <p className="text-xs text-gray-500 font-medium">50 lbs</p>
                     </div>
                     <div className="text-center">
                       <img src="/lovable-uploads/43b73590-e0a4-481a-91c4-5e5212f53331.png" alt="Oil-Max Filter System 2" className="w-full h-32 object-cover rounded-lg shadow-md" />
                       <p className="text-sm text-gray-600 mt-2">Standard System</p>
+                      <p className="text-xs text-gray-500 font-medium">90 lbs</p>
                     </div>
                     <div className="text-center">
                       <img src="/lovable-uploads/0541a846-38a4-4c60-84fa-eb3a079ead54.png" alt="Oil-Max Filter System 3" className="w-full h-32 object-cover rounded-lg shadow-md" />
                       <p className="text-sm text-gray-600 mt-2">Heavy Duty System</p>
+                      <p className="text-xs text-gray-500 font-medium">150 lbs</p>
                     </div>
                     <div className="text-center">
                       <img src="/lovable-uploads/0bc1e1c8-2174-4c5d-9669-49cfccd9f53e.png" alt="Oil-Max Filter System 4" className="w-full h-32 object-cover rounded-lg shadow-md" />
                       <p className="text-sm text-gray-600 mt-2">Professional System</p>
+                      <p className="text-xs text-gray-500 font-medium">250 lbs</p>
                     </div>
+                  </div>
+                  <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-center">
+                    <p className="text-sm text-blue-700">
+                      <span className="font-medium">Note:</span> The Professional System (250 lbs) is for bakeries or multiple fryers
+                    </p>
                   </div>
                 </div>
                 
                 <div className="flex flex-wrap gap-3">
                   <CTAButton text="Request a Quote" link="/contact" variant="quote" />
+                  <CTAButton text="Order Free Sample" link="/contact" variant="sample" />
                 </div>
               </div>
             </div>

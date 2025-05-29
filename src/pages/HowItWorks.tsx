@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -47,7 +46,10 @@ const HowItWorks = () => {
       number: 2,
       title: "Superior Capture Rate",
       description: "The specialized filter media captures particles and impurities more effectively than standard filtration systems.",
-      image: "/lovable-uploads/887c55ba-1be0-4b87-bdb5-b343035e789d.png"
+      images: [
+        "/lovable-uploads/b6158ba6-5f1c-4408-bfe5-04b63d88e332.png",
+        "/lovable-uploads/b2867c0b-932d-418e-a6af-efede7b92dee.png"
+      ]
     },
     {
       number: 3,
@@ -164,11 +166,24 @@ const HowItWorks = () => {
           {filterSteps.map((step, index) => (
             <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 mb-16 items-center`}>
               <div className="w-full md:w-1/2">
-                <img 
-                  src={step.image} 
-                  alt={`Filter Step ${step.number}: ${step.title}`} 
-                  className="rounded-lg shadow-lg w-full h-auto object-cover"
-                />
+                {step.images ? (
+                  <div className="grid grid-cols-2 gap-4">
+                    {step.images.map((image, imgIndex) => (
+                      <img 
+                        key={imgIndex}
+                        src={image} 
+                        alt={`Filter Step ${step.number}: ${step.title}`} 
+                        className="rounded-lg shadow-lg w-full h-auto object-cover transform -rotate-90"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <img 
+                    src={step.image} 
+                    alt={`Filter Step ${step.number}: ${step.title}`} 
+                    className="rounded-lg shadow-lg w-full h-auto object-cover transform -rotate-90"
+                  />
+                )}
               </div>
               <div className="w-full md:w-1/2">
                 <div className="flex items-center mb-4">

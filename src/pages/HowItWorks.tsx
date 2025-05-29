@@ -183,6 +183,12 @@ const HowItWorks = () => {
                     alt={`Filter Step ${step.number}: ${step.title}`} 
                     className="rounded-lg shadow-lg w-full h-auto object-cover"
                   />
+                ) : step.number === 3 || step.number === 4 ? (
+                  <img 
+                    src={step.image} 
+                    alt={`Filter Step ${step.number}: ${step.title}`} 
+                    className="rounded-lg shadow-lg w-full h-auto object-cover transform rotate-90"
+                  />
                 ) : (
                   <img 
                     src={step.image} 

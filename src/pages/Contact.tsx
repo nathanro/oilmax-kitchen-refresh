@@ -301,7 +301,7 @@ const Contact = () => {
                 controls
                 preload="metadata"
               >
-                <source src="https://drive.google.com/uc?export=download&id=1UNpAUIVY7VfipPuKLp3TR4qFMrhTy2m4" type="video/mp4" />
+                <source src="https://storage.googleapis.com/msgsndr/nmW3gLctihiAASowE1dC/media/6837b19ef362d6a4b8aced34.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="p-6">

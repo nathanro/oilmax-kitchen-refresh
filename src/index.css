@@ -87,9 +87,22 @@
     scroll-behavior: smooth;
   }
 
-  /* Optimize images */
+  /* Optimize images for better performance */
   img {
     content-visibility: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Critical image optimization */
+  img[fetchpriority="high"] {
+    content-visibility: visible;
+  }
+
+  /* Lazy loaded images optimization */
+  img[loading="lazy"] {
+    content-visibility: auto;
+    contain-intrinsic-size: 200px 150px;
   }
 
   /* Reduce motion for users who prefer it */
@@ -113,13 +126,51 @@
       min-height: 44px;
       min-width: 44px;
     }
+
+    /* Optimize images on mobile */
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
+
+  /* High DPI display optimizations */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+      image-rendering: -webkit-optimize-contrast;
+    }
   }
 }
 
-/* Preload critical resources */
+/* Performance utilities */
 @layer utilities {
   .preload-critical {
     content-visibility: auto;
     contain-intrinsic-size: 200px;
   }
+
+  .optimize-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+  }
+
+  .gpu-accelerate {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+/* Placeholder animations optimized for performance */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

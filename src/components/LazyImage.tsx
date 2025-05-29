@@ -7,6 +7,8 @@ interface LazyImageProps {
   className?: string;
   loading?: 'lazy' | 'eager';
   decoding?: 'sync' | 'async' | 'auto';
+  webpSrc?: string;
+  avifSrc?: string;
 }
 
 const LazyImage = ({ 
@@ -14,11 +16,14 @@ const LazyImage = ({
   alt, 
   className = '', 
   loading = 'lazy',
-  decoding = 'async'
+  decoding = 'async',
+  webpSrc,
+  avifSrc
 }: LazyImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,7 +33,10 @@ const LazyImage = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.1,
+        rootMargin: '50px' // Load images 50px before they come into view
+      }
     );
 
     if (imgRef.current) {
@@ -42,20 +50,34 @@ const LazyImage = ({
     setIsLoaded(true);
   };
 
+  const handleError = () => {
+    setHasError(true);
+    setIsLoaded(true); // Still set as loaded to hide placeholder
+  };
+
   return (
     <div ref={imgRef} className={`relative ${className}`}>
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
       )}
       {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-          loading={loading}
-          decoding={decoding}
-          onLoad={handleLoad}
-        />
+        <picture>
+          {avifSrc && <source srcSet={avifSrc} type="image/avif" />}
+          {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
+          <img
+            src={src}
+            alt={alt}
+            className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+            loading={loading}
+            decoding={decoding}
+            onLoad={handleLoad}
+            onError={handleError}
+            style={{
+              maxWidth: '100%',
+              height: 'auto'
+            }}
+          />
+        </picture>
       )}
     </div>
   );

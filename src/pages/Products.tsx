@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -153,7 +152,6 @@ const Products = () => {
                 
                 <div className="flex flex-wrap gap-3">
                   <CTAButton text="Request a Quote" link="/contact" variant="quote" />
-                  <CTAButton text="Order Free Sample" link="/contact" variant="sample" />
                 </div>
               </div>
             </div>

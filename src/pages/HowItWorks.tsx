@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -40,7 +41,7 @@ const HowItWorks = () => {
       number: 1,
       title: "Built-In Filtration",
       description: "Our Oil-Max filter systems feature advanced multi-stage filtration designed specifically for cooking oil.",
-      image: "/lovable-uploads/9f0bda39-e021-40f2-a45e-0119db9ec229.png"
+      image: "/lovable-uploads/a81e4e5c-6d5b-4164-b959-de86f1f630e9.png"
     },
     {
       number: 2,

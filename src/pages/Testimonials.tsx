@@ -282,7 +282,16 @@ const Testimonials = () => {
           />
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {["Burger King", "Major Donut Chain", "Sparkler Filters", "Restaurant Chain"].map((company, index) => (
+            <div className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+              <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+                <img 
+                  src="/lovable-uploads/45c2d7e2-7ff9-4315-adb3-e1268bec0e10.png" 
+                  alt="Burger King" 
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+            </div>
+            {["Major Donut Chain", "Sparkler Filters", "Restaurant Chain"].map((company, index) => (
               <div key={index} className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
                 <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
                   <p className="text-lg font-semibold text-gray-700">{company}</p>

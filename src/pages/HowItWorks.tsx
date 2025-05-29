@@ -39,7 +39,7 @@ const HowItWorks = () => {
     {
       number: 1,
       title: "Built-In Filtration",
-      description: "Our Oil-Max filter systems feature advanced multi-stage filtration designed specifically for commercial kitchens.",
+      description: "Our Oil-Max filter systems feature advanced multi-stage filtration designed specifically for cooking oil.",
       image: "/lovable-uploads/9f0bda39-e021-40f2-a45e-0119db9ec229.png"
     },
     {

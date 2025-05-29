@@ -177,6 +177,12 @@ const HowItWorks = () => {
                       />
                     ))}
                   </div>
+                ) : step.number === 1 ? (
+                  <img 
+                    src={step.image} 
+                    alt={`Filter Step ${step.number}: ${step.title}`} 
+                    className="rounded-lg shadow-lg w-full h-auto object-cover"
+                  />
                 ) : (
                   <img 
                     src={step.image} 

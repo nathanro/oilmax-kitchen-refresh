@@ -117,7 +117,7 @@ const Benefits = () => {
     {
       number: 4,
       title: "Total Savings",
-      description: "See your net savings after implementing Oil-Max."
+      description: "See your net oil savings after implementing Oil-Max."
     }
   ];
 
@@ -125,7 +125,7 @@ const Benefits = () => {
     <>
       <HeroSection
         title="🌟 Benefits of Oil-Max: Clean Oil. Better Food. Real Savings."
-        subtitle="Discover how Oil-Max transforms kitchen operations with proven results and real customer savings."
+        subtitle="Discover how Oil-Max transforms frying operations with proven results and real customer savings."
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop"
       />
 
@@ -214,7 +214,7 @@ const Benefits = () => {
             </Button>
             
             <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 text-center">Your Estimated Annual Savings</h3>
+              <h3 className="text-xl font-semibold mb-4 text-center">Your Estimated Annual Oil Savings</h3>
               <div className="text-center">
                 {error ? (
                   <p className="text-red-600 font-medium">{error}</p>

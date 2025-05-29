@@ -29,7 +29,11 @@ const HeroSection = ({
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             {title}
           </h1>
-          <p className="text-xl text-white/90 mb-8">{subtitle}</p>
+          <p className="text-xl text-white/90 mb-8">
+            {subtitle === "Discover how Oil-Max transforms kitchen operations with proven results and real customer savings." 
+              ? "Discover how Oil-Max transforms frying operations with proven results and real customer savings."
+              : subtitle}
+          </p>
           <div className="flex justify-center">
             <CTAButton
               text="Request a Quote"

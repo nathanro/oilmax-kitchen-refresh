@@ -171,7 +171,7 @@ const HowItWorks = () => {
               </div>
               <div className="w-full md:w-1/2">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-xl mr-4">
+                  <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl mr-4">
                     {step.number}
                   </div>
                   <h3 className="text-2xl font-bold">{step.title}</h3>

@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+
 const Contact = () => {
   const {
     toast
@@ -40,8 +41,13 @@ const Contact = () => {
       form.dataset.startTime = Date.now().toString();
     }
   };
-  return <>
-      <HeroSection title="Contact Us" subtitle="Request a free sample or get a personalized quote for your business." backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop" />
+  return (
+    <>
+      <HeroSection 
+        title="Contact Us" 
+        subtitle="Request a free sample or get a personalized quote for your business." 
+        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop" 
+      />
 
       {/* Contact Form */}
       <section className="py-20 px-4 bg-white">
@@ -247,10 +253,18 @@ const Contact = () => {
                     <h4 className="font-medium text-gray-800 mb-3">Our Location</h4>
                     <Dialog>
                       <DialogTrigger asChild>
-                        <img src="/lovable-uploads/4bc3aa6c-7d2d-4faa-829e-b228a4826ccd.png" alt="Map showing Sparkler Filters location at 101 North Loop 336 East, Conroe, Texas" className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity" />
+                        <img 
+                          src="/lovable-uploads/4bc3aa6c-7d2d-4faa-829e-b228a4826ccd.png" 
+                          alt="Map showing Sparkler Filters location at 101 North Loop 336 East, Conroe, Texas" 
+                          className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                        />
                       </DialogTrigger>
                       <DialogContent className="max-w-4xl">
-                        <img src="/lovable-uploads/4bc3aa6c-7d2d-4faa-829e-b228a4826ccd.png" alt="Map showing Sparkler Filters location at 101 North Loop 336 East, Conroe, Texas" className="w-full h-auto" />
+                        <img 
+                          src="/lovable-uploads/4bc3aa6c-7d2d-4faa-829e-b228a4826ccd.png" 
+                          alt="Map showing Sparkler Filters location at 101 North Loop 336 East, Conroe, Texas" 
+                          className="w-full h-auto" 
+                        />
                       </DialogContent>
                     </Dialog>
                   </div>
@@ -264,10 +278,17 @@ const Contact = () => {
       {/* Company Images Section */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto">
-          <SectionHeading title="Our Facility" subtitle="Sparkler Filters Inc. - Manufacturing Oil-Max in Conroe, Texas" />
+          <SectionHeading 
+            title="Our Facility" 
+            subtitle="Sparkler Filters Inc. - Manufacturing Oil-Max in Conroe, Texas" 
+          />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img alt="Sparkler Filters facility exterior view" className="w-full h-64 object-cover" src="/lovable-uploads/235b3040-d129-47a1-9d46-33204ad1fc0a.jpg" />
+              <img 
+                alt="Sparkler Filters facility exterior view" 
+                className="w-full h-64 object-cover" 
+                src="/lovable-uploads/235b3040-d129-47a1-9d46-33204ad1fc0a.jpg" 
+              />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Manufacturing Facility</h3>
                 <p className="text-gray-600">Our state-of-the-art facility in Conroe, Texas where Oil-Max is manufactured with the highest quality standards.</p>
@@ -275,7 +296,14 @@ const Contact = () => {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img src="/lovable-uploads/1ede504b-b9fe-4703-8689-f215ad8ed52c.png" alt="Sparkler Filters building front view" className="w-full h-64 object-cover" />
+              <video 
+                className="w-full h-64 object-cover" 
+                controls
+                preload="metadata"
+              >
+                <source src="https://drive.google.com/uc?export=download&id=1UNpAUIVY7VfipPuKLp3TR4qFMrhTy2m4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Sparkler Filters Inc.</h3>
                 <p className="text-gray-600">The home of Oil-Max production, proudly serving the food service industry with innovative filtration solutions.</p>
@@ -288,7 +316,10 @@ const Contact = () => {
       {/* FAQs */}
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
-          <SectionHeading title="Frequently Asked Questions" subtitle="Quick answers to common questions about Oil-Max and ordering." />
+          <SectionHeading 
+            title="Frequently Asked Questions" 
+            subtitle="Quick answers to common questions about Oil-Max and ordering." 
+          />
           
           <div className="max-w-3xl mx-auto">
             {[{
@@ -313,6 +344,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </>;
+    </>
+  );
 };
+
 export default Contact;

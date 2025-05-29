@@ -33,16 +33,16 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20 md:h-20">
           {/* Logo - Responsive layout */}
-          <Link to="/" className={`flex items-center ${isMobile ? 'flex-col space-y-1' : 'space-x-3'}`}>
+          <Link to="/" className={`flex items-center ${isMobile ? 'flex-col justify-center' : 'space-x-3'}`}>
             <LazyImage 
               alt="Oil-Max Logo" 
               src="/lovable-uploads/39ee7bff-3ad3-47ae-878c-d889f0025143.png" 
-              className={`${isMobile ? 'h-8 w-24' : 'h-12 w-40'} rounded-md`}
+              className={`${isMobile ? 'h-6 w-20 mb-1' : 'h-12 w-40'} rounded-md object-contain`}
               loading="eager"
               decoding="async"
             />
-            <span className={`font-bold text-gray-900 ${isMobile ? 'text-xs text-center leading-tight' : 'text-lg whitespace-nowrap'}`}>
-              {isMobile ? 'Cooking Oil\nFiltration' : 'Cooking Oil Filtration'}
+            <span className={`font-bold text-gray-900 ${isMobile ? 'text-xs text-center leading-tight whitespace-nowrap' : 'text-lg whitespace-nowrap'}`}>
+              {isMobile ? 'Cooking Oil Filtration' : 'Cooking Oil Filtration'}
             </span>
           </Link>
 

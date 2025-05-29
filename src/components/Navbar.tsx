@@ -7,6 +7,7 @@ import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
 import { useMobile } from "@/hooks/use-mobile";
+import LazyImage from "@/components/LazyImage";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,18 +31,18 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo with text to the right */}
-          <Link to="/" className="flex items-center space-x-3">
-            <img 
+        <div className="flex items-center justify-between h-20 md:h-20">
+          {/* Logo - Responsive layout */}
+          <Link to="/" className={`flex items-center ${isMobile ? 'flex-col space-y-1' : 'space-x-3'}`}>
+            <LazyImage 
               alt="Oil-Max Logo" 
               src="/lovable-uploads/39ee7bff-3ad3-47ae-878c-d889f0025143.png" 
-              className="h-12 w-40 rounded-md" 
+              className={`${isMobile ? 'h-8 w-24' : 'h-12 w-40'} rounded-md`}
               loading="eager"
               decoding="async"
             />
-            <span className="text-lg font-bold text-gray-900 whitespace-nowrap">
-              Cooking Oil Filtration
+            <span className={`font-bold text-gray-900 ${isMobile ? 'text-xs text-center leading-tight' : 'text-lg whitespace-nowrap'}`}>
+              {isMobile ? 'Cooking Oil\nFiltration' : 'Cooking Oil Filtration'}
             </span>
           </Link>
 
@@ -69,14 +70,14 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden space-x-4 items-center">
+          <div className="flex md:hidden space-x-2 items-center">
             <LanguageSwitch />
             <button 
               onClick={toggleMenu} 
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>

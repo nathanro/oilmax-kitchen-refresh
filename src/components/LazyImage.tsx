@@ -9,6 +9,7 @@ interface LazyImageProps {
   decoding?: 'sync' | 'async' | 'auto';
   webpSrc?: string;
   avifSrc?: string;
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
 const LazyImage = ({ 
@@ -18,14 +19,17 @@ const LazyImage = ({
   loading = 'lazy',
   decoding = 'async',
   webpSrc,
-  avifSrc
+  avifSrc,
+  fetchPriority = 'auto'
 }: LazyImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(loading === 'eager');
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (loading === 'eager') return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -35,7 +39,7 @@ const LazyImage = ({
       },
       { 
         threshold: 0.1,
-        rootMargin: '50px' // Load images 50px before they come into view
+        rootMargin: '100px' // Preload images earlier for better UX
       }
     );
 
@@ -44,7 +48,7 @@ const LazyImage = ({
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [loading]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -52,15 +56,15 @@ const LazyImage = ({
 
   const handleError = () => {
     setHasError(true);
-    setIsLoaded(true); // Still set as loaded to hide placeholder
+    setIsLoaded(true);
   };
 
   return (
     <div ref={imgRef} className={`relative ${className}`}>
-      {!isLoaded && (
+      {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
       )}
-      {isInView && (
+      {isInView && !hasError && (
         <picture>
           {avifSrc && <source srcSet={avifSrc} type="image/avif" />}
           {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
@@ -70,6 +74,7 @@ const LazyImage = ({
             className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
             loading={loading}
             decoding={decoding}
+            fetchPriority={fetchPriority}
             onLoad={handleLoad}
             onError={handleError}
             style={{
@@ -78,6 +83,11 @@ const LazyImage = ({
             }}
           />
         </picture>
+      )}
+      {hasError && (
+        <div className={`${className} bg-gray-300 flex items-center justify-center text-gray-500 text-sm`}>
+          Image not available
+        </div>
       )}
     </div>
   );

@@ -1,11 +1,15 @@
+
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
+import { useMobile } from "@/hooks/use-mobile";
 import LanguageSwitch from "./LanguageSwitch";
+import LazyImage from "./LazyImage";
 
 const Footer = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const isMobile = useMobile();
   
   const navigation = [
     { name: t.nav.home, href: "/" },
@@ -28,17 +32,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <img 
+            <div className={`flex items-center ${isMobile ? 'flex-col space-y-2' : 'space-x-3'}`}>
+              <LazyImage 
                 src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png" 
                 alt="Oil-Max Logo" 
-                className="h-12 w-32 rounded-md bg-white" 
+                className={`${isMobile ? 'h-16 w-40' : 'h-12 w-32'} rounded-md bg-white p-2`}
+                loading="lazy"
+                decoding="async"
               />
-              <span className="text-lg font-bold text-white whitespace-nowrap">
+              <span className={`font-bold text-white ${isMobile ? 'text-center text-sm leading-tight' : 'text-lg whitespace-nowrap'}`}>
                 Cooking Oil Filtration
               </span>
             </div>
-            <p className="text-gray-400 max-w-xs">
+            <p className="text-gray-400 max-w-xs text-center md:text-left">
               Better Oil. Better Food. Bigger Margins. Extending fryer oil life since the 1960s.
             </p>
           </div>
@@ -85,7 +91,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col items-center md:items-start">
             <p className="text-gray-400">{t.footer.copyright}</p>
-            <p className="text-gray-400 text-sm mt-2">Part of the Sparkler Filters Family | Built in the USA | Real Support, Real People</p>
+            <p className="text-gray-400 text-sm mt-2 text-center md:text-left">Part of the Sparkler Filters Family | Built in the USA | Real Support, Real People</p>
             <p className="text-gray-500 text-xs mt-2">
               powered by{" "}
               <a 

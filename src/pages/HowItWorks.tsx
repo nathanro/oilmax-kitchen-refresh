@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -62,7 +61,7 @@ const HowItWorks = () => {
       number: 4,
       title: "Maximum Performance",
       description: "When combined with Sparklaid powder, our filters deliver the ultimate oil cleaning performance for extended oil life.",
-      image: "/lovable-uploads/2f8544ac-c71f-4726-b908-17d13cefee0b.png"
+      image: "/lovable-uploads/b3450541-f9db-4c43-af1c-341ec365d861.png"
     }
   ];
 

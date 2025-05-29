@@ -173,27 +173,15 @@ const HowItWorks = () => {
                         key={imgIndex}
                         src={image} 
                         alt={`Filter Step ${step.number}: ${step.title}`} 
-                        className="rounded-lg shadow-lg w-full h-auto object-cover transform -rotate-90"
+                        className="rounded-lg shadow-lg w-full h-auto object-cover"
                       />
                     ))}
                   </div>
-                ) : step.number === 1 ? (
-                  <img 
-                    src={step.image} 
-                    alt={`Filter Step ${step.number}: ${step.title}`} 
-                    className="rounded-lg shadow-lg w-full h-auto object-cover"
-                  />
-                ) : step.number === 3 || step.number === 4 ? (
-                  <img 
-                    src={step.image} 
-                    alt={`Filter Step ${step.number}: ${step.title}`} 
-                    className="rounded-lg shadow-lg w-full h-auto object-cover transform rotate-90"
-                  />
                 ) : (
                   <img 
                     src={step.image} 
                     alt={`Filter Step ${step.number}: ${step.title}`} 
-                    className="rounded-lg shadow-lg w-full h-auto object-cover transform -rotate-90"
+                    className="rounded-lg shadow-lg w-full h-auto object-cover"
                   />
                 )}
               </div>
@@ -216,7 +204,7 @@ const HowItWorks = () => {
         <div className="container mx-auto">
           <SectionHeading
             title="Technical Specifications"
-            subtitle="Everything you need to know about using the Oil-Max System in your kitchen."
+            subtitle="Everything you need to know about using the Oil-Max System"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

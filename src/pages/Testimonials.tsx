@@ -278,7 +278,7 @@ const Testimonials = () => {
         <div className="container mx-auto">
           <SectionHeading
             title="Trusted By Industry Leaders"
-            subtitle="Join over 2,500 kitchens that rely on Oil-Max for better oil filtration."
+            subtitle="Join over 2,500 satisfied customers that rely on Oil-Max for better oil filtration."
           />
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">

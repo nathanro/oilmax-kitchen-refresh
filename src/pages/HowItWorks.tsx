@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -55,7 +56,7 @@ const HowItWorks = () => {
       number: 3,
       title: "Easy Maintenance",
       description: "Simple filter replacement and cleaning procedures keep your system running efficiently with minimal downtime.",
-      image: "/lovable-uploads/b306df30-43df-4748-9a48-2c53c20e5236.png"
+      image: "/lovable-uploads/1ec5087b-57d8-4134-ae88-df55ad278be0.png"
     },
     {
       number: 4,

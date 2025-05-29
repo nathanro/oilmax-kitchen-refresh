@@ -282,33 +282,61 @@ const Testimonials = () => {
           />
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            <div className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-              <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
-                <img 
-                  src="/lovable-uploads/45c2d7e2-7ff9-4315-adb3-e1268bec0e10.png" 
-                  alt="Burger King" 
-                  className="h-12 w-auto object-contain"
-                />
-              </div>
+            <div className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+              <img 
+                src="/lovable-uploads/b0da71e3-4baf-41ca-a3a9-0052a6571d25.png" 
+                alt="Burger King" 
+                className="h-16 object-contain mb-2" 
+              />
+              <span className="text-sm text-gray-600 font-medium">Burger King</span>
             </div>
-            {["Major Donut Chain", "Sparkler Filters", "Restaurant Chain"].map((company, index) => (
-              <div key={index} className="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
-                  <p className="text-lg font-semibold text-gray-700">{company}</p>
-                </div>
-              </div>
-            ))}
+            <div className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+              <img 
+                src="/lovable-uploads/5e4184f2-d496-469f-8726-f21f96714dbe.png" 
+                alt="Major Donut Chain" 
+                className="h-16 object-contain mb-2" 
+              />
+              <span className="text-sm text-gray-600 font-medium">Major Donut Chain</span>
+            </div>
+            <div className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+              <img 
+                src="/lovable-uploads/cfdd392f-f156-4534-90f4-e945e4664245.png" 
+                alt="Sparkler Filters" 
+                className="h-16 object-contain mb-2" 
+              />
+              <span className="text-sm text-gray-600 font-medium">Sparkler Filters</span>
+            </div>
+            <div className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
+              <img 
+                src="/lovable-uploads/d062a8f0-d468-470a-ab44-9135e4487f2f.png" 
+                alt="Restaurant Chain" 
+                className="h-16 object-contain mb-2" 
+              />
+              <span className="text-sm text-gray-600 font-medium">Restaurant Chain</span>
+            </div>
           </div>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
-            <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <span className="text-gray-700 font-medium">FDA Recognized</span>
+            <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
+              <img src="/lovable-uploads/8b3f12a8-04f2-4e91-9394-0bcab197b832.png" alt="FDA Recognized" className="h-14 w-14 object-contain mr-3" />
+              <div>
+                <span className="text-blue-700 font-bold text-lg">FDA Recognized</span>
+                <p className="text-blue-600 text-sm">Since 1960s</p>
+              </div>
             </div>
-            <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <span className="text-gray-700 font-medium">USDA Approved</span>
+            <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
+              <img src="/lovable-uploads/6d64327d-2bb2-4afd-b9e3-2e4e6db37742.png" alt="USDA Approved" className="h-14 w-14 object-contain mr-3" />
+              <div>
+                <span className="text-blue-700 font-bold text-lg">USDA Approved</span>
+                <p className="text-blue-600 text-sm">Since 1960s</p>
+              </div>
             </div>
-            <div className="flex items-center bg-white px-4 py-2 rounded-lg border border-gray-200">
-              <span className="text-gray-700 font-medium">Made in USA</span>
+            <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
+              <img alt="Made in USA" className="h-14 w-14 object-contain mr-3" src="/lovable-uploads/94dda56b-e179-48ca-971a-b2cfcf05563d.png" />
+              <div>
+                <span className="text-blue-700 font-bold text-lg">Made in USA</span>
+                <p className="text-blue-600 text-sm">Since 1960s</p>
+              </div>
             </div>
           </div>
         </div>

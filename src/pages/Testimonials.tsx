@@ -39,7 +39,7 @@ const Testimonials = () => {
     <>
       <HeroSection
         title="Customer Success Stories"
-        subtitle="Hear from real businesses that have transformed their operations with Oil-Max."
+        subtitle="Join over 2,500 satisfied customers that rely on Oil-Max for better oil filtration."
         backgroundImage="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1400&h=700&auto=format&fit=crop"
       />
 

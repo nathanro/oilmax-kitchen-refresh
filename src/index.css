@@ -74,6 +74,8 @@
   body {
     @apply bg-background text-foreground;
     font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* Optimize font loading */
@@ -87,30 +89,36 @@
     scroll-behavior: smooth;
   }
 
-  /* Optimize images for better performance */
+  /* Global image optimization */
   img {
     content-visibility: auto;
     max-width: 100%;
     height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
   }
 
-  /* Critical image optimization */
+  /* Critical images */
   img[fetchpriority="high"] {
     content-visibility: visible;
   }
 
-  /* Lazy loaded images optimization */
+  /* Lazy loaded images */
   img[loading="lazy"] {
     content-visibility: auto;
     contain-intrinsic-size: 200px 150px;
   }
 
-  /* Reduce motion for users who prefer it */
+  /* Reduce motion for accessibility */
   @media (prefers-reduced-motion: reduce) {
     * {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+    }
+    
+    html {
+      scroll-behavior: auto;
     }
   }
 
@@ -127,50 +135,96 @@
       min-width: 44px;
     }
 
-    /* Optimize images on mobile */
-    img {
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
+    /* Optimize touch scrolling */
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Better text rendering on mobile */
+    body {
+      text-rendering: optimizeSpeed;
     }
   }
 
-  /* High DPI display optimizations */
+  /* High DPI optimizations */
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     img {
       image-rendering: -webkit-optimize-contrast;
+      image-rendering: optimize-contrast;
     }
   }
 }
 
-/* Performance utilities */
-@layer utilities {
-  .preload-critical {
-    content-visibility: auto;
-    contain-intrinsic-size: 200px;
+/* Enhanced animations for better performance */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
   }
-
-  .optimize-image {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    backface-visibility: hidden;
-  }
-
-  .gpu-accelerate {
-    transform: translateZ(0);
-    will-change: transform;
+  100% {
+    background-position: 200% 0;
   }
 }
 
-/* Placeholder animations optimized for performance */
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Performance utilities */
+@layer utilities {
+  .gpu-accelerate {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .optimize-rendering {
+    contain: layout style paint;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Image optimization utilities */
+  .img-crisp {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .img-smooth {
+    image-rendering: auto;
+  }
+}
+
+/* Improve loading states */
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+}
+
+/* Better focus indicators for accessibility */
+@layer components {
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
 }

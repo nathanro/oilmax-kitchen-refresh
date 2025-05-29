@@ -1,4 +1,3 @@
-
 import { lazy, Suspense } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -55,7 +54,7 @@ const Index = () => {
     }
   ];
 
-  // Trusted by logos with optimized loading
+  // Trusted by logos with optimized loading - Enhanced with next-gen formats
   const trustedBy = [
     {
       name: "Burger King",
@@ -86,15 +85,16 @@ const Index = () => {
           }} 
         />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          {/* Large Logo Display - Critical image loaded eagerly */}
+          {/* Large Logo Display - Critical image with next-gen support */}
           <div className="mb-8">
-            <img 
+            <LazyImage 
               src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png" 
               alt="Oil-Max Logo" 
               className="h-52 w-72 mx-auto rounded-lg bg-white/90 p-4 shadow-2xl" 
               loading="eager"
               decoding="async"
               fetchPriority="high"
+              sizes="(max-width: 768px) 240px, 288px"
             />
           </div>
           
@@ -214,7 +214,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trusted By Section with Enhanced Made in USA - Using LazyImage for better performance */}
+      {/* Trusted By Section with Enhanced Made in USA - Using optimized LazyImage */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeading title={t.trustedBy.title} subtitle={t.trustedBy.subtitle} />
@@ -222,15 +222,14 @@ const Index = () => {
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {trustedBy.map((company, index) => (
               <div key={index} className="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                <Suspense fallback={<div className="h-16 w-16 bg-gray-200 animate-pulse rounded" />}>
-                  <LazyImage 
-                    src={company.logo} 
-                    alt={company.name} 
-                    className="h-16 object-contain mb-2" 
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </Suspense>
+                <LazyImage 
+                  src={company.logo} 
+                  alt={company.name} 
+                  className="h-16 object-contain mb-2" 
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 768px) 64px, 80px"
+                />
                 <span className="text-sm text-gray-600 font-medium">{company.name}</span>
               </div>
             ))}
@@ -238,45 +237,42 @@ const Index = () => {
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
             <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
-              <Suspense fallback={<div className="h-14 w-14 bg-gray-200 animate-pulse rounded mr-3" />}>
-                <LazyImage 
-                  src="/lovable-uploads/8b3f12a8-04f2-4e91-9394-0bcab197b832.png" 
-                  alt="FDA Recognized" 
-                  className="h-14 w-14 object-contain mr-3" 
-                  loading="lazy"
-                  decoding="async"
-                />
-              </Suspense>
+              <LazyImage 
+                src="/lovable-uploads/8b3f12a8-04f2-4e91-9394-0bcab197b832.png" 
+                alt="FDA Recognized" 
+                className="h-14 w-14 object-contain mr-3" 
+                loading="lazy"
+                decoding="async"
+                sizes="56px"
+              />
               <div>
                 <span className="text-blue-700 font-bold text-lg">{t.trustedBy.certifications.fda}</span>
                 <p className="text-blue-600 text-sm">Since 1960s</p>
               </div>
             </div>
             <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
-              <Suspense fallback={<div className="h-14 w-14 bg-gray-200 animate-pulse rounded mr-3" />}>
-                <LazyImage 
-                  src="/lovable-uploads/6d64327d-2bb2-4afd-b9e3-2e4e6db37742.png" 
-                  alt="USDA Approved" 
-                  className="h-14 w-14 object-contain mr-3" 
-                  loading="lazy"
-                  decoding="async"
-                />
-              </Suspense>
+              <LazyImage 
+                src="/lovable-uploads/6d64327d-2bb2-4afd-b9e3-2e4e6db37742.png" 
+                alt="USDA Approved" 
+                className="h-14 w-14 object-contain mr-3" 
+                loading="lazy"
+                decoding="async"
+                sizes="56px"
+              />
               <div>
                 <span className="text-blue-700 font-bold text-lg">{t.trustedBy.certifications.usda}</span>
                 <p className="text-blue-600 text-sm">Since 1960s</p>
               </div>
             </div>
             <div className="flex items-center bg-white px-6 py-3 rounded-lg border-2 border-blue-500 shadow-md">
-              <Suspense fallback={<div className="h-14 w-14 bg-gray-200 animate-pulse rounded mr-3" />}>
-                <LazyImage 
-                  alt="Made in USA" 
-                  className="h-14 w-14 object-contain mr-3" 
-                  src="/lovable-uploads/94dda56b-e179-48ca-971a-b2cfcf05563d.png" 
-                  loading="lazy"
-                  decoding="async"
-                />
-              </Suspense>
+              <LazyImage 
+                alt="Made in USA" 
+                className="h-14 w-14 object-contain mr-3" 
+                src="/lovable-uploads/94dda56b-e179-48ca-971a-b2cfcf05563d.png" 
+                loading="lazy"
+                decoding="async"
+                sizes="56px"
+              />
               <div>
                 <span className="text-blue-700 font-bold text-lg">{t.trustedBy.certifications.usa}</span>
                 <p className="text-blue-600 text-sm">Since 1960s</p>

@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import CTAButton from "@/components/CTAButton";
@@ -173,7 +174,7 @@ const HowItWorks = () => {
                         key={imgIndex}
                         src={image} 
                         alt={`Filter Step ${step.number}: ${step.title}`} 
-                        className="rounded-lg shadow-lg w-full h-auto object-cover"
+                        className="rounded-lg shadow-lg w-full h-auto object-cover transform -rotate-90"
                       />
                     ))}
                   </div>

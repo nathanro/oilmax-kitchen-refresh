@@ -31,8 +31,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info - Mejorado para mobile */}
-          <div className="space-y-4">
-            <div className="flex flex-col items-center md:items-start space-y-3">
+          <div className="space-y-6">
+            <div className="flex flex-col items-center md:items-start space-y-4">
               <LazyImage 
                 src="/lovable-uploads/d28e5e5c-c9f2-428f-a6ed-beed274d2ecb.png" 
                 alt="Oil-Max Logo" 
@@ -92,7 +92,7 @@ const Footer = () => {
 
         {/* Footer Bottom - Mejorado para mobile */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:items-center">
+          <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:justify-between md:items-center">
             <div className="flex flex-col items-center md:items-start space-y-2">
               <p className="text-gray-400 text-sm text-center md:text-left">{t.footer.copyright}</p>
               <p className="text-gray-400 text-xs text-center md:text-left leading-relaxed">Part of the Sparkler Filters Family | Built in the USA | Real Support, Real People</p>
@@ -109,7 +109,7 @@ const Footer = () => {
               </p>
             </div>
             
-            <div className="flex flex-col items-center md:items-end space-y-4 md:space-y-0">
+            <div className="flex flex-col items-center md:items-end space-y-6 md:space-y-4">
               <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                 {legal.map((item) => (
                   <Link

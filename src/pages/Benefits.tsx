@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -51,6 +52,15 @@ const Benefits = () => {
     const annualSavings = Math.round(baseline - reduced);
     
     setSavings(annualSavings);
+  };
+
+  const resetCalculator = () => {
+    setFryers("");
+    setChangesPerMonth("");
+    setOilCapacity("");
+    setCostPerGallon("");
+    setSavings(null);
+    setError("");
   };
 
   const benefitsList = [
@@ -168,7 +178,7 @@ const Benefits = () => {
                   type="number" 
                   value={fryers}
                   onChange={(e) => setFryers(e.target.value)}
-                  placeholder="3"
+                  placeholder="Enter number of fryers"
                   min="1"
                 />
               </div>
@@ -178,7 +188,7 @@ const Benefits = () => {
                   type="number" 
                   value={changesPerMonth}
                   onChange={(e) => setChangesPerMonth(e.target.value)}
-                  placeholder="4"
+                  placeholder="Enter oil changes per month"
                   min="1"
                 />
               </div>
@@ -188,7 +198,7 @@ const Benefits = () => {
                   type="number" 
                   value={oilCapacity}
                   onChange={(e) => setOilCapacity(e.target.value)}
-                  placeholder="35"
+                  placeholder="Enter oil capacity"
                   min="0.1"
                   step="0.1"
                 />
@@ -199,21 +209,30 @@ const Benefits = () => {
                   type="number" 
                   value={costPerGallon}
                   onChange={(e) => setCostPerGallon(e.target.value)}
-                  placeholder="45"
+                  placeholder="Enter cost per gallon"
                   min="0.01"
                   step="0.01"
                 />
               </div>
             </div>
             
-            <Button 
-              onClick={calculateSavings}
-              className="bg-primary hover:bg-oilmax-dark text-white font-semibold py-2 px-6 rounded-md w-full"
-            >
-              Calculate My Savings
-            </Button>
+            <div className="flex gap-4 mb-8">
+              <Button 
+                onClick={calculateSavings}
+                className="bg-primary hover:bg-oilmax-dark text-white font-semibold py-2 px-6 rounded-md flex-1"
+              >
+                Calculate My Savings
+              </Button>
+              <Button 
+                onClick={resetCalculator}
+                variant="outline"
+                className="font-semibold py-2 px-6 rounded-md"
+              >
+                Reset
+              </Button>
+            </div>
             
-            <div className="mt-8 p-6 bg-gray-50 rounded-lg">
+            <div className="p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-center">Your Estimated Annual Oil Savings</h3>
               <div className="text-center">
                 {error ? (

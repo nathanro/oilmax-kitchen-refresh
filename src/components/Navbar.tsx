@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 flex-shrink-0 min-w-0">
+          <Link to="/" className="flex flex-col items-center justify-center space-y-1 flex-shrink-0 min-w-0">
             <LazyImage 
               alt="Oil-Max Logo" 
               src="/lovable-uploads/39ee7bff-3ad3-47ae-878c-d889f0025143.png" 
@@ -53,7 +53,7 @@ const Navbar = () => {
               loading="eager"
               decoding="async"
             />
-            <span className={`font-bold text-gray-900 ${isMobile ? 'text-xs leading-tight' : 'text-sm'} whitespace-nowrap`}>
+            <span className={`font-bold text-gray-900 ${isMobile ? 'text-xs leading-tight' : 'text-sm'} whitespace-nowrap text-center`}>
               Cooking Oil Filtration
             </span>
           </Link>

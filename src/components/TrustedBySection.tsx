@@ -57,23 +57,23 @@ const TrustedBySection = () => {
           subtitle="Join over 2,500 satisfied customers that rely on Oil-Max for better oil filtration."
         />
         
-        {/* Brand Logos */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        {/* Brand Logos - Uniform sizing and styling */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {brands.map((brand, index) => (
-            <div key={index} className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300 min-h-[200px]">
-              <div className="flex items-center justify-center w-full mb-4 h-32">
-                <Suspense fallback={<div className="h-32 w-full bg-gray-200 rounded animate-pulse" />}>
+            <div key={index} className="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-100 hover:shadow-md transition duration-300">
+              <div className="flex items-center justify-center w-24 h-24 mb-4">
+                <Suspense fallback={<div className="w-24 h-24 bg-gray-200 rounded animate-pulse" />}>
                   <LazyImage 
                     src={brand.src}
                     alt={brand.alt}
-                    className="max-h-32 max-w-full object-contain filter grayscale hover:grayscale-0 transition duration-300"
+                    className="w-full h-full object-contain"
                     loading="lazy"
                     decoding="async"
-                    sizes="(max-width: 768px) 200px, 250px"
+                    sizes="96px"
                   />
                 </Suspense>
               </div>
-              <span className="text-sm text-gray-700 font-medium text-center">{brand.name}</span>
+              <span className="text-sm text-gray-700 font-medium text-center leading-tight">{brand.name}</span>
             </div>
           ))}
         </div>

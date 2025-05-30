@@ -44,25 +44,15 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-14 md:h-16">
-          {/* Logo - Centrado y optimizado */}
-          <Link to="/" className="flex items-center justify-center flex-shrink-0 min-w-0 py-2">
-            <div className="flex flex-col items-center justify-center max-w-full">
-              <LazyImage 
-                alt="Oil-Max Logo" 
-                src="/lovable-uploads/bd960e8d-8403-4fb3-8f07-4c266144075c.png" 
-                className={`${isMobile ? 'h-6 w-auto' : 'h-8 w-auto'} object-contain flex-shrink-0 mb-0.5`}
-                loading="eager"
-                decoding="async"
-              />
-              <div className="text-center">
-                <div className={`${isMobile ? 'text-xs' : 'text-sm'} font-bold text-gray-800 leading-none`}>
-                  Oil-MAX
-                </div>
-                <div className={`${isMobile ? 'text-[10px]' : 'text-xs'} text-gray-600 leading-none mt-0.5`}>
-                  Cooking Oil Filtration
-                </div>
-              </div>
-            </div>
+          {/* Logo - Solo imagen sin texto */}
+          <Link to="/" className="flex items-center justify-center flex-shrink-0 min-w-0">
+            <LazyImage 
+              alt="Oil-Max Logo" 
+              src="/lovable-uploads/bd960e8d-8403-4fb3-8f07-4c266144075c.png" 
+              className={`${isMobile ? 'h-3 w-auto' : 'h-4 w-auto'} object-contain flex-shrink-0`}
+              loading="eager"
+              decoding="async"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -31,23 +31,23 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20 md:h-20">
-          {/* Logo - Responsive layout */}
-          <Link to="/" className={`flex items-center ${isMobile ? 'flex-col justify-center' : 'space-x-3'}`}>
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo - Mejorado para mobile */}
+          <Link to="/" className="flex items-center space-x-2 flex-shrink-0 min-w-0">
             <LazyImage 
               alt="Oil-Max Logo" 
               src="/lovable-uploads/39ee7bff-3ad3-47ae-878c-d889f0025143.png" 
-              className={`${isMobile ? 'h-6 w-20 mb-1' : 'h-12 w-40'} rounded-md object-contain`}
+              className={`${isMobile ? 'h-8 w-16' : 'h-12 w-24'} rounded-md object-contain flex-shrink-0`}
               loading="eager"
               decoding="async"
             />
-            <span className={`font-bold text-gray-900 ${isMobile ? 'text-xs text-center leading-tight whitespace-nowrap' : 'text-lg whitespace-nowrap'}`}>
-              {isMobile ? 'Cooking Oil Filtration' : 'Cooking Oil Filtration'}
+            <span className={`font-bold text-gray-900 ${isMobile ? 'text-xs leading-tight' : 'text-sm'} whitespace-nowrap`}>
+              Cooking Oil Filtration
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navItems.map(item => (
               <Link 
                 key={item.path} 
@@ -61,16 +61,16 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
             <LanguageSwitch />
             <Button asChild variant="default" size="sm" className="bg-cta hover:bg-cta-hover">
               <Link to="/contact">Request a Quote</Link>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden space-x-2 items-center">
+          {/* Mobile Actions - Reorganizado */}
+          <div className="flex md:hidden items-center space-x-3">
             <LanguageSwitch />
             <button 
               onClick={toggleMenu} 
@@ -85,13 +85,13 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && isMobile && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
+        <div className="md:hidden bg-white border-t shadow-lg">
+          <div className="px-4 pt-2 pb-3 space-y-1">
             {navItems.map(item => (
               <Link 
                 key={item.path} 
                 to={item.path} 
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                className={`block px-3 py-3 rounded-md text-base font-medium transition-colors ${
                   pathname === item.path 
                     ? "text-primary bg-gray-50" 
                     : "text-gray-600 hover:text-primary hover:bg-gray-50"
@@ -101,7 +101,7 @@ const Navbar = () => {
                 {item.title}
               </Link>
             ))}
-            <div className="mt-4 px-3">
+            <div className="mt-4 px-3 pb-2">
               <Button 
                 asChild 
                 variant="default" 

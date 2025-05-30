@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -45,7 +44,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex flex-col items-center justify-center space-y-0.5 flex-shrink-0 min-w-0">
+          <Link to="/" className="flex flex-col items-center justify-center space-y-0 flex-shrink-0 min-w-0">
             <LazyImage 
               alt="Oil-Max Logo" 
               src="/lovable-uploads/39ee7bff-3ad3-47ae-878c-d889f0025143.png" 

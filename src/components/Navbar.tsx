@@ -28,11 +28,23 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleQuoteClick = () => {
+    if (pathname === '/contact') {
+      // Si estamos en la página de contacto, hacer scroll al formulario
+      const formElement = document.getElementById('contact-form');
+      if (formElement) {
+        formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    // Si no estamos en contact, el Link se encargará de navegar
+    closeMenu();
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo - Mejorado para mobile */}
+          {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 flex-shrink-0 min-w-0">
             <LazyImage 
               alt="Oil-Max Logo" 
@@ -64,12 +76,22 @@ const Navbar = () => {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
             <LanguageSwitch />
-            <Button asChild variant="default" size="sm" className="bg-cta hover:bg-cta-hover">
-              <Link to="/contact">Request a Quote</Link>
+            <Button 
+              asChild={pathname !== '/contact'} 
+              variant="default" 
+              size="sm" 
+              className="bg-cta hover:bg-cta-hover"
+              onClick={pathname === '/contact' ? handleQuoteClick : undefined}
+            >
+              {pathname === '/contact' ? (
+                <span>Request a Quote</span>
+              ) : (
+                <Link to="/contact">Request a Quote</Link>
+              )}
             </Button>
           </div>
 
-          {/* Mobile Actions - Reorganizado */}
+          {/* Mobile Actions */}
           <div className="flex md:hidden items-center space-x-3">
             <LanguageSwitch />
             <button 
@@ -103,13 +125,17 @@ const Navbar = () => {
             ))}
             <div className="mt-4 px-3 pb-2">
               <Button 
-                asChild 
+                asChild={pathname !== '/contact'}
                 variant="default" 
                 size="sm" 
-                className="w-full bg-cta hover:bg-cta-hover" 
-                onClick={closeMenu}
+                className="w-full bg-cta hover:bg-cta-hover"
+                onClick={pathname === '/contact' ? handleQuoteClick : closeMenu}
               >
-                <Link to="/contact">Request a Quote</Link>
+                {pathname === '/contact' ? (
+                  <span>Request a Quote</span>
+                ) : (
+                  <Link to="/contact">Request a Quote</Link>
+                )}
               </Button>
             </div>
           </div>

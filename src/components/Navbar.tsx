@@ -43,13 +43,13 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14 md:h-16">
-          {/* Logo - Solo imagen sin texto */}
-          <Link to="/" className="flex items-center justify-center flex-shrink-0 min-w-0">
+        <div className="flex items-center justify-between h-20 md:h-24">
+          {/* Logo - Imagen con dos líneas de texto */}
+          <Link to="/" className="flex items-center justify-center flex-shrink-0 min-w-0 py-2">
             <LazyImage 
               alt="Oil-Max Logo" 
               src="/lovable-uploads/bd960e8d-8403-4fb3-8f07-4c266144075c.png" 
-              className={`${isMobile ? 'h-3 w-auto' : 'h-4 w-auto'} object-contain flex-shrink-0`}
+              className={`${isMobile ? 'h-16 w-auto' : 'h-20 w-auto'} object-contain flex-shrink-0`}
               loading="eager"
               decoding="async"
             />

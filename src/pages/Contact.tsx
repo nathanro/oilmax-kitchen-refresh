@@ -101,9 +101,6 @@ const Contact = () => {
                       <p className="text-gray-600 mt-1">
                         <span data-email="info" data-domain="oil-max.com">info[at]oil-max[dot]com</span>
                       </p>
-                      <p className="text-gray-600">
-                        <span data-email="info" data-domain="oil-max.com">info[at]oil-max[dot]com</span>
-                      </p>
                     </div>
                   </div>
                   
@@ -151,7 +148,7 @@ const Contact = () => {
                     </Dialog>
                   </div>
 
-                  {/* Request Quote Button */}
+                  {/*Request Quote Button 
                   <div className="mt-8 pt-6 border-t border-gray-200">
                     <Button 
                       onClick={scrollToForm}
@@ -159,7 +156,7 @@ const Contact = () => {
                     >
                       Request a Quote
                     </Button>
-                  </div>
+                  </div>*/}
                 </div>
               </div>
             </div>

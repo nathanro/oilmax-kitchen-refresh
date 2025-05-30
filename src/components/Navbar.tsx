@@ -45,17 +45,14 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex flex-col items-center justify-center flex-shrink-0 min-w-0">
+          <Link to="/" className="flex items-center justify-center flex-shrink-0 min-w-0">
             <LazyImage 
               alt="Oil-Max Logo" 
-              src="/lovable-uploads/39ee7bff-3ad3-47ae-878c-d889f0025143.png" 
-              className={`${isMobile ? 'h-10 w-20' : 'h-14 w-28'} rounded-md object-contain flex-shrink-0 mb-1`}
+              src="/lovable-uploads/bd960e8d-8403-4fb3-8f07-4c266144075c.png" 
+              className={`${isMobile ? 'h-12 w-auto' : 'h-16 w-auto'} object-contain flex-shrink-0`}
               loading="eager"
               decoding="async"
             />
-            <span className={`font-bold text-gray-900 ${isMobile ? 'text-xs leading-tight' : 'text-sm'} whitespace-nowrap text-center -mt-1`}>
-              Cooking Oil Filtration
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

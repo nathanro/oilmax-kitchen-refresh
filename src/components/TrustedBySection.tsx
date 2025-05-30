@@ -60,16 +60,16 @@ const TrustedBySection = () => {
         {/* Brand Logos */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {brands.map((brand, index) => (
-            <div key={index} className="flex flex-col items-center justify-center p-8 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300 min-h-[250px]">
-              <div className="flex items-center justify-center w-full mb-4 h-40">
-                <Suspense fallback={<div className="h-40 w-full bg-gray-200 rounded animate-pulse" />}>
+            <div key={index} className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+              <div className="flex items-center justify-center w-full mb-4 h-24">
+                <Suspense fallback={<div className="h-24 w-full bg-gray-200 rounded animate-pulse" />}>
                   <LazyImage 
                     src={brand.src}
                     alt={brand.alt}
-                    className="max-h-40 max-w-full filter grayscale hover:grayscale-0 transition duration-300"
+                    className="max-h-24 max-w-full object-contain filter grayscale hover:grayscale-0 transition duration-300"
                     loading="lazy"
                     decoding="async"
-                    sizes="(max-width: 768px) 250px, 300px"
+                    sizes="(max-width: 768px) 200px, 250px"
                   />
                 </Suspense>
               </div>

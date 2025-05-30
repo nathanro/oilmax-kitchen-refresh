@@ -48,7 +48,7 @@ const Navbar = () => {
             <LazyImage 
               alt="Oil-Max Logo" 
               src="/lovable-uploads/39ee7bff-3ad3-47ae-878c-d889f0025143.png" 
-              className={`${isMobile ? 'h-8 w-16' : 'h-12 w-24'} rounded-md object-contain flex-shrink-0`}
+              className={`${isMobile ? 'h-10 w-20' : 'h-14 w-28'} rounded-md object-contain flex-shrink-0`}
               loading="eager"
               decoding="async"
             />

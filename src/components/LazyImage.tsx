@@ -110,10 +110,10 @@ const LazyImage = ({
     onError?.();
   };
 
-  const containerClasses = `relative overflow-hidden ${className}`;
-  const imageClasses = `transition-opacity duration-300 w-full h-full ${
+  const containerClasses = `relative ${className}`;
+  const imageClasses = `transition-opacity duration-300 w-full h-full object-contain ${
     isLoaded ? 'opacity-100' : 'opacity-0'
-  } ${className.includes('object-') ? '' : 'object-contain'}`;
+  }`;
 
   return (
     <div ref={imgRef} className={containerClasses}>

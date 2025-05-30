@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -5,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import LazyImage from "@/components/LazyImage";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const [formType, setFormType] = useState("sample");
@@ -18,20 +20,37 @@ const Contact = () => {
     }
   };
 
+  const scrollToForm = () => {
+    const formElement = document.getElementById('contact-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setFormType("quote");
+    }
+  };
+
   return (
     <>
       <HeroSection 
         title="Contact Us" 
         subtitle="Request a free sample or get a personalized quote for your business." 
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&h=700&auto=format&fit=crop" 
-      />
+      >
+        <div className="mt-8">
+          <Button 
+            onClick={scrollToForm}
+            className="bg-primary hover:bg-oilmax-dark text-white font-semibold py-3 px-8 rounded-md text-lg"
+          >
+            Request a Quote
+          </Button>
+        </div>
+      </HeroSection>
 
       {/* Contact Form */}
-      <section className="py-20 px-4 bg-white">
+      <section id="contact-form" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-2/3">
-              <Tabs defaultValue="sample" onValueChange={setFormType}>
+              <Tabs value={formType} onValueChange={setFormType}>
                 <TabsList className="grid w-full grid-cols-2 mb-8">
                   <TabsTrigger value="sample">Free Sample</TabsTrigger>
                   <TabsTrigger value="quote">Request Quote</TabsTrigger>
@@ -130,6 +149,16 @@ const Contact = () => {
                         />
                       </DialogContent>
                     </Dialog>
+                  </div>
+
+                  {/* Request Quote Button */}
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <Button 
+                      onClick={scrollToForm}
+                      className="w-full bg-primary hover:bg-oilmax-dark text-white font-semibold py-3 px-6 rounded-md"
+                    >
+                      Request a Quote
+                    </Button>
                   </div>
                 </div>
               </div>

@@ -1,50 +1,30 @@
 
-import CTAButton from "./CTAButton";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/lib/translations";
+import { ReactNode } from "react";
 
-type HeroSectionProps = {
+interface HeroSectionProps {
   title: string;
   subtitle: string;
-  backgroundImage: string;
-};
+  backgroundImage?: string;
+  children?: ReactNode;
+}
 
-const HeroSection = ({
-  title,
-  subtitle,
-  backgroundImage,
-}: HeroSectionProps) => {
-  const { language } = useLanguage();
-  const t = translations[language];
-  
+const HeroSection = ({ title, subtitle, backgroundImage, children }: HeroSectionProps) => {
   return (
-    <div
-      className="relative bg-cover bg-center pt-32 pb-20 min-h-[90vh] flex items-center"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/lovable-uploads/8418117e-c143-4222-b8df-ffa3f849465f.png)`,
-      }}
-    >
-      <div className="container mx-auto px-4 z-10">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            {title}
-          </h1>
-          <p className="text-xl text-white/90 mb-8">
-            {subtitle === "Discover how Oil-Max transforms kitchen operations with proven results and real customer savings." 
-              ? "Discover how Oil-Max transforms frying operations with proven results and real customer savings."
-              : subtitle}
-          </p>
-          <div className="flex justify-center">
-            <CTAButton
-              text="Request a Quote"
-              link="/contact"
-              variant="quote"
-              className="text-lg"
-            />
-          </div>
-        </div>
+    <section className="relative py-32 px-4 bg-gradient-to-r from-primary to-oilmax-dark text-white">
+      {backgroundImage && (
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
+          style={{ backgroundImage: `url(${backgroundImage})` }} 
+        />
+      )}
+      <div className="relative z-10 container mx-auto text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">{title}</h1>
+        <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
+          {subtitle}
+        </p>
+        {children}
       </div>
-    </div>
+    </section>
   );
 };
 

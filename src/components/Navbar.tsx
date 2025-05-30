@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo - Ajustado para quedar centrado en el header */}
           <Link to="/" className="flex items-center flex-shrink-0">
             <LazyImage 
@@ -53,9 +53,6 @@ const Navbar = () => {
               loading="eager"
               decoding="async"
             />
-  <span className="text-xs md:text-sm text-gray-700 m-0">
-    Cooking Oil Filtration
-  </span>
           </Link>
 
           {/* Desktop Navigation */}
